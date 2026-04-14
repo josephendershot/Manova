@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" fill="#000000" />
+  <!-- A single perfectly centered 'm' -->
+  <path d="M 20 75 L 20 45 C 20 25, 50 25, 50 45 L 50 75 M 50 45 C 50 25, 80 25, 80 45 L 80 75" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
