@@ -1,6 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // CAROUSEL LOGIC
+// CAROUSEL LOGIC
     const carouselItems = document.querySelectorAll('.carousel-item');
     if (carouselItems.length > 0) {
         let activeIndex = 0;
@@ -133,4 +131,3 @@ document.addEventListener('DOMContentLoaded', () => {
             legalPanel.style.display = 'none';
         });
     }
-});
