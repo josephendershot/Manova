@@ -254,17 +254,15 @@ h1 em {
 .marquee-item {
     display: flex;
     align-items: center;
-    gap: 0;
     white-space: nowrap;
 }
 
-.marquee-item span {
+.client-name {
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: #14120b;
     letter-spacing: -.01em;
-    padding: 0 28px;
     text-transform: uppercase;
 }
 
@@ -272,6 +270,16 @@ h1 em {
     color: #888;
     font-size: 20px;
     line-height: 1;
+    margin: 0 40px;
+}
+
+.marquee-logo {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    margin-right: 16px;
 }
 
 @keyframes marquee {
@@ -310,13 +318,29 @@ section {
 
 .problems-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     border: 1px solid #2e2d29;
+}
+
+@media(max-width:1024px) {
+    .problems-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .problem-card:nth-child(2) {
+        border-right: none;
+    }
 }
 
 @media(max-width:800px) {
     .problems-grid {
         grid-template-columns: 1fr;
+    }
+    .problem-card {
+        border-right: none;
+        border-bottom: 1px solid #2e2d29;
+    }
+    .problem-card:last-child {
+        border-bottom: none;
     }
 }
 
@@ -1126,7 +1150,7 @@ footer {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .carousel-btn:hover {
@@ -1217,14 +1241,16 @@ footer {
 }
 
 @media(max-width: 800px) {
+
     /* Container & structure overrides */
     .carousel-container {
         padding: 30px 15px;
     }
-    
+
     .carousel-track {
         perspective: none;
-        padding-bottom: 70px; /* Space for buttons below */
+        padding-bottom: 70px;
+        /* Space for buttons below */
     }
 
     /* Bulletproof visibility logic for mobile */
@@ -1234,7 +1260,7 @@ footer {
         opacity: 0 !important;
         visibility: hidden !important;
     }
-    
+
     .carousel-item.active {
         display: block !important;
         opacity: 1 !important;
@@ -1252,27 +1278,29 @@ footer {
     }
 
     .carousel-btn:hover {
-        transform: scale(1.05); /* Overriding the translateY hover */
+        transform: scale(1.05);
+        /* Overriding the translateY hover */
     }
 
     .carousel-btn.prev-btn {
         left: calc(50% - 60px);
     }
-    
+
     .carousel-btn.next-btn {
         right: calc(50% - 60px);
     }
 
     /* Override inline styles to compact the layout heavily */
-    .carousel-item > div {
+    .carousel-item>div {
         padding: 30px 20px !important;
         gap: 24px !important;
     }
-    
-    .cs-before, .cs-after {
+
+    .cs-before,
+    .cs-after {
         padding: 20px !important;
     }
-    
+
     .cs-header h2 {
         font-size: clamp(26px, 6vw, 36px) !important;
         margin-top: 12px !important;
@@ -1281,7 +1309,7 @@ footer {
     .cs-impact {
         padding-top: 20px !important;
     }
-    
+
     .cs-impact p {
         font-size: 16px !important;
     }
