@@ -1,4 +1,5 @@
 // CAROUSEL LOGIC
+try {
     const carouselItems = document.querySelectorAll('.carousel-item');
     if (carouselItems.length > 0) {
         let activeIndex = 0;
@@ -49,8 +50,12 @@
 
         updateCarousel();
     }
+} catch (error) {
+    console.error('Error en la lógica del carrusel:', error);
+}
 
-    // Legal Panel logic
+// Legal Panel logic
+try {
     const legalData = {
         aviso: `
             <div style="font-family: 'Inter', sans-serif;">
@@ -131,3 +136,6 @@
             legalPanel.style.display = 'none';
         });
     }
+} catch (error) {
+    console.error('Error en la lógica legal:', error);
+}
