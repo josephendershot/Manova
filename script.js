@@ -1,54 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // CAROUSEL LOGIC
     const carouselItems = document.querySelectorAll('.carousel-item');
-    if (carouselItems.length === 0) return;
+    if (carouselItems.length > 0) {
+        let activeIndex = 0;
 
-    let activeIndex = 0;
+        function updateCarousel() {
+            carouselItems.forEach((item, index) => {
+                item.classList.remove('active', 'next', 'prev', 'next-shadow', 'prev-shadow');
+                
+                const diff = (index - activeIndex + carouselItems.length) % carouselItems.length;
+                
+                if (diff === 0) item.classList.add('active');
+                else if (diff === 1) item.classList.add('next');
+                else if (diff === 2) item.classList.add('next-shadow');
+                else if (diff === carouselItems.length - 2) item.classList.add('prev-shadow');
+                else if (diff === carouselItems.length - 1) item.classList.add('prev');
+            });
+        }
 
-    function updateCarousel() {
-        carouselItems.forEach((item, index) => {
-            item.classList.remove('active', 'next', 'prev', 'next-shadow', 'prev-shadow');
-            
-            const diff = (index - activeIndex + carouselItems.length) % carouselItems.length;
-            
-            if (diff === 0) item.classList.add('active');
-            else if (diff === 1) item.classList.add('next');
-            else if (diff === 2) item.classList.add('next-shadow');
-            else if (diff === carouselItems.length - 2) item.classList.add('prev-shadow');
-            else if (diff === carouselItems.length - 1) item.classList.add('prev');
-        });
-    }
+        const nextBtn = document.querySelector('.next-btn');
+        const prevBtn = document.querySelector('.prev-btn');
 
-    const nextBtn = document.querySelector('.next-btn');
-    const prevBtn = document.querySelector('.prev-btn');
-
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            activeIndex = (activeIndex + 1) % carouselItems.length;
-            updateCarousel();
-        });
-    }
-
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-            activeIndex = (activeIndex - 1 + carouselItems.length) % carouselItems.length;
-            updateCarousel();
-        });
-    }
-
-    // Permitir clic en las tarjetas laterales
-    carouselItems.forEach((item) => {
-        item.addEventListener('click', () => {
-            if (item.classList.contains('prev') || item.classList.contains('prev-shadow')) {
-                activeIndex = (activeIndex - 1 + carouselItems.length) % carouselItems.length;
-                updateCarousel();
-            } else if (item.classList.contains('next') || item.classList.contains('next-shadow')) {
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
                 activeIndex = (activeIndex + 1) % carouselItems.length;
                 updateCarousel();
-            }
-        });
-    });
+            });
+        }
 
-    updateCarousel();
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                activeIndex = (activeIndex - 1 + carouselItems.length) % carouselItems.length;
+                updateCarousel();
+            });
+        }
+
+        // Permitir clic en las tarjetas laterales
+        carouselItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                if (item.classList.contains('prev') || item.classList.contains('prev-shadow')) {
+                    activeIndex = (activeIndex - 1 + carouselItems.length) % carouselItems.length;
+                    updateCarousel();
+                } else if (item.classList.contains('next') || item.classList.contains('next-shadow')) {
+                    activeIndex = (activeIndex + 1) % carouselItems.length;
+                    updateCarousel();
+                }
+            });
+        });
+
+        updateCarousel();
+    }
 
     // Legal Panel logic
     const legalData = {
