@@ -1,141 +1,390 @@
-// CAROUSEL LOGIC
-try {
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    if (carouselItems.length > 0) {
-        let activeIndex = 0;
+(function () {
+    'use strict';
 
-        function updateCarousel() {
-            carouselItems.forEach((item, index) => {
-                item.classList.remove('active', 'next', 'prev', 'next-shadow', 'prev-shadow');
-                
-                const diff = (index - activeIndex + carouselItems.length) % carouselItems.length;
-                
-                if (diff === 0) item.classList.add('active');
-                else if (diff === 1) item.classList.add('next');
-                else if (diff === 2) item.classList.add('next-shadow');
-                else if (diff === carouselItems.length - 2) item.classList.add('prev-shadow');
-                else if (diff === carouselItems.length - 1) item.classList.add('prev');
-            });
-        }
-
-        const nextBtn = document.querySelector('.next-btn');
-        const prevBtn = document.querySelector('.prev-btn');
-
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                activeIndex = (activeIndex + 1) % carouselItems.length;
-                updateCarousel();
-            });
-        }
-
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                activeIndex = (activeIndex - 1 + carouselItems.length) % carouselItems.length;
-                updateCarousel();
-            });
-        }
-
-        // Permitir clic en las tarjetas laterales
-        carouselItems.forEach((item) => {
-            item.addEventListener('click', () => {
-                if (item.classList.contains('prev') || item.classList.contains('prev-shadow')) {
-                    activeIndex = (activeIndex - 1 + carouselItems.length) % carouselItems.length;
-                    updateCarousel();
-                } else if (item.classList.contains('next') || item.classList.contains('next-shadow')) {
-                    activeIndex = (activeIndex + 1) % carouselItems.length;
-                    updateCarousel();
-                }
-            });
-        });
-
-        updateCarousel();
-    }
-} catch (error) {
-    console.error('Error en la lógica del carrusel:', error);
-}
-
-// Legal Panel logic
-try {
-    const legalData = {
-        aviso: `
-            <div style="font-family: 'Inter', sans-serif;">
-                <p style="margin-bottom: 24px; font-weight: 500;">Esta página explica cómo Manova recopila, utiliza, comparte y protege la información cuando usted utiliza el sitio web y los servicios de Manova.</p>
-                <p style="margin-bottom: 24px;">Manova (la "Empresa") se compromete a mantener sólidas protecciones de privacidad para sus clientes en el ámbito de la documentación operativa para despachos profesionales. Esta Política de Privacidad está diseñada para ayudarle a entender cómo recopilamos, utilizamos y salvaguardamos la información que nos proporciona y para ayudarle a tomar decisiones informadas al utilizar nuestro Servicio.</p>
-                
-                <h3 style="color: #fff; font-size: 18px; margin-top: 24px; margin-bottom: 12px;">1. Información que recopilamos</h3>
-                <p style="margin-bottom: 16px;">Recopilamos tanto "Información No Personal" como "Información Personal". La Información No Personal incluye datos de uso anónimos, URL de referencia y salida, tipos de plataforma, recuento de clics e interacciones de la interfaz. La Información Personal incluye su dirección de correo electrónico, nombre, información de la firma y detalles de contacto que usted envía a través de los formularios del sitio para agendar una llamada.</p>
-                <p style="margin-bottom: 16px;">Para agendar una llamada, no necesita enviar más información que su correo electrónico y datos básicos del despacho. No obstante, empleamos el uso de cookies y archivos de registro para hacer un seguimiento del comportamiento en el sitio que no lo identifica personalmente.</p>
-                
-                <h3 style="color: #fff; font-size: 18px; margin-top: 24px; margin-bottom: 12px;">2. Cómo utilizamos y compartimos la información</h3>
-                <p style="margin-bottom: 16px;">No vendemos, intercambiamos, alquilamos ni compartimos su Información Personal con fines de marketing con terceros sin su consentimiento explícito.</p>
-                <p style="margin-bottom: 16px;">Compartimos información personal con proveedores que prestan servicios para la Empresa, como la infraestructura de comunicaciones u organizadores de agenda. Nos reservamos el derecho a compartir información personal si creemos de buena fe que el acceso, uso o preservación de la misma es razonablemente necesario para satisfacer un proceso legal, proteger contra daños a los derechos, propiedad o seguridad pública.</p>
-
-                <h3 style="color: #fff; font-size: 18px; margin-top: 24px; margin-bottom: 12px;">3. Cómo protegemos su información</h3>
-                <p style="margin-bottom: 16px;">Implementamos estrictas medidas de seguridad diseñadas para proteger su información institucional contra el acceso no autorizado. Utilizamos salvaguardas tecnológicas como el cifrado y la tecnología de capa de conexión segura. Sin embargo, dado que ningún sistema es infalible, al utilizar el Servicio usted reconoce y acepta los riesgos inherentes.</p>
-
-                <h3 style="color: #fff; font-size: 18px; margin-top: 24px; margin-bottom: 12px;">4. Cambios y Contacto</h3>
-                <p style="margin-bottom: 16px;">Manova se reserva el derecho de modificar esta Política de Privacidad en cualquier momento. Los cambios significativos se notificarán de forma visible en el Sitio. Para cualquier duda respecto a estas prácticas, contáctenos en <a href="mailto:hola@manova.mx" style="color: #bda36e; text-decoration: underline;">hola@manova.mx</a>.</p>
-            </div>
-        `,
-        terminos: `
-            <div style="font-family: 'Inter', sans-serif;">
-                <p style="margin-bottom: 24px; font-weight: 500;">Estos términos rigen su uso del sitio web operado por Manova y adaptan las pautas comerciales aplicables para nuestros entregables de documentación operativa.</p>
-                <p style="margin-bottom: 24px;">Al acceder o utilizar el Sitio y sus servicios, usted acepta estos Términos en su nombre o en el de la entidad a la que representa. Si usted es menor de 18 años o no está de acuerdo con estas disposiciones, no debe acceder al Sitio.</p>
-
-                <h3 style="color: #fff; font-size: 18px; margin-top: 24px; margin-bottom: 12px;">1. Acceso al Sitio y Cesión de Uso</h3>
-                <p style="margin-bottom: 16px;">Sujeto a estos Términos, la Empresa le otorga una licencia intransferible, no exclusiva, revocable y limitada para usar el Sitio con fines informativos para la sistematización de su despacho.</p>
-                <p style="margin-bottom: 16px;">Usted tiene prohibido licenciar, vender, alquilar, arrendar, o explotar comercialmente la información, los diagramas, los formatos o recursos publicados en el Sitio sin nuestro consentimiento formal. Asimismo, no puede aplicar ingeniería inversa al sitio con el propósito de construir un producto competitivo.</p>
-                
-                <h3 style="color: #fff; font-size: 18px; margin-top: 24px; margin-bottom: 12px;">2. Contenido del Usuario e Indemnización</h3>
-                <p style="margin-bottom: 16px;">Cualquier material, manual anterior, o documento en bruto que nos comparta será tratado con estricta confidencialidad operativa. Sin embargo, usted seguirá siendo enteramente responsable de cualquier implicación normativa o legal contenida en los materiales originales de su firma (su "Contenido de Usuario").</p>
-                <p style="margin-bottom: 16px;">Usted acepta indemnizar y eximir de responsabilidad a la Empresa frente a reclamaciones derivadas del contenido inexacto proporcionado por su equipo que termine consolidado en manuales operativos.</p>
-
-                <h3 style="color: #fff; font-size: 18px; margin-top: 24px; margin-bottom: 12px;">3. Exenciones y Limitación sobre Responsabilidad</h3>
-                <p style="margin-bottom: 16px;">Toda publicación se proporciona "tal cual". Manova asiste en compilar y redactar, pero la implementación final recae sobre la directiva del despacho. Renunciamos expresamente a todas las garantías obligatorias o implícitas.</p>
-                <p style="margin-bottom: 16px;">En la medida máxima permitida por la ley, en ningún caso la Empresa será legalmente responsable ante usted o terceros por lucro cesante o daños punitivos ni consecuencias derivadas directamente o indirectamente del empleo no supervisado de su documentación.</p>
-
-                <h3 style="color: #fff; font-size: 18px; margin-top: 24px; margin-bottom: 12px;">4. Resolución de Disputas (Arbitraje)</h3>
-                <p style="margin-bottom: 16px;">Ambas partes se comprometen a buscar conferencias de resolución de fondo y buena fé de manera paralela y privada en un plazo estipulado previo de 60 días en lugar de cualquier demanda judicial, incluyendo una exención recíproca a pleitos colectivos.</p>
-                <p style="margin-bottom: 16px;">Para notificaciones o aclaraciones puntuales escriba a <a href="mailto:hola@manova.mx" style="color: #bda36e; text-decoration: underline;">hola@manova.mx</a>.</p>
-            </div>
-        `
+    // =========================================================
+    //  DATOS: CAROUSEL — 5 slides × 2 idiomas
+    // =========================================================
+    var carouselData = {
+        es: [
+            {
+                label: 'CASO DE ESTUDIO // DESPACHO CONTABLE',
+                title: '"MI EQUIPO NO SABE CÓMO DAR DE ALTA UN EMPLEADO"',
+                beforeTag: '[ ANTES: CAOS OPERATIVO ]',
+                beforeIntro: 'El área de nómina de un despacho contable dependía de la memoria de la supervisora y de 4 correos electrónicos reenviados. Cuando un nuevo cliente mandaba altas al IMSS:',
+                beforeItems: [
+                    'Se enviaba la info incompleta vía WhatsApp.',
+                    'El practicante la capturaba pero siempre olvidaba pedir el aviso de retención de Infonavit.',
+                    'El cálculo de nómina salía mal en la primera quincena y el cliente final se quejaba.'
+                ],
+                afterTag: '[ DESPUÉS: LA SOLUCIÓN SAKKA 作家 ]',
+                afterIntro: 'En 10 días mapeamos y centralizamos el proceso en un entregable claro:',
+                afterItems: [
+                    '<strong>Checklist cliente:</strong> Nadie inicia el trámite si el cliente no entrega el RFC e Infonavit.',
+                    '<strong>Responsables fijos:</strong> Asignación clara de pantallas. Cero dependencias ambigüas.',
+                    '<strong>Guía visual del IDSE:</strong> Capturas de pantalla actualizadas para que el practicante copie/pegue sin preguntarle a la supervisora.'
+                ],
+                result: '<strong>Resultado:</strong> Las altas de nómina disminuyeron de 3 horas de validación a 20 minutos de ejecución autónoma. Los errores del IDSE se redujeron a <strong style="color:#14120b;border-bottom:2px solid #bda36e;">cero</strong>.'
+            },
+            {
+                label: 'CASO DE ESTUDIO // DESPACHO JURÍDICO',
+                title: '"NUESTROS CONTRATOS TIENEN NOMBRES DEL CLIENTE ANTERIOR"',
+                beforeTag: '[ ANTES: CAOS OPERATIVO ]',
+                beforeIntro: 'Los abogados junior tardaban horas adaptando contratos porque no había una fuente única de verdad:',
+                beforeItems: [
+                    'Buscaban en el servidor un contrato que "se pareciera" y lo sobreescribían.',
+                    'Olvidaban actualizar anexos y dejaban montos pasados.',
+                    'El socio revisaba línea por línea, actuando como un corrector de estilo.'
+                ],
+                afterTag: '[ DESPUÉS: LA SOLUCIÓN SAKKA 作家 ]',
+                afterIntro: 'Bloqueamos el posicionamiento de cada área del despacho y centralizamos el conocimiento en una bóveda de cláusulas y plantillas:',
+                afterItems: [
+                    '<strong>Repositorio maestro:</strong> Una sola versión oficial de cada tipo de contrato.',
+                    '<strong>Checklist de validación:</strong> Pasos obligatorios antes de enviar a firma.',
+                    '<strong>Árbol de decisiones:</strong> Guía para usar cláusulas restrictivas vs permisivas.'
+                ],
+                result: '<strong>Resultado:</strong> El tiempo de redacción bajó de 2.5 horas a 15 minutos. El socio ahora solo revisa estrategia legal, reduciendo su carga en un <strong style="color:#14120b;border-bottom:2px solid #bda36e;">80%</strong>.'
+            },
+            {
+                label: 'CASO DE ESTUDIO // CONSULTORÍA FISCAL',
+                title: '"TARDAMOS DEMASIADO EN EMITIR UNA OPINIÓN FISCAL"',
+                beforeTag: '[ ANTES: CAOS OPERATIVO ]',
+                beforeIntro: 'Analizar implicaciones fiscales era un proceso artesanal y altamente dependiente del socio:',
+                beforeItems: [
+                    'Se investigaban desde cero temas ya resueltos meses antes.',
+                    'Los formatos de entrega variaban enormemente según quién redactaba.',
+                    'Se perdía tiempo buscando precedentes en correos antiguos.'
+                ],
+                afterTag: '[ DESPUÉS: LA SOLUCIÓN SAKKA 作家 ]',
+                afterIntro: 'Sistematizamos la investigación y entrega de opiniones:',
+                afterItems: [
+                    '<strong>Playbook de investigación:</strong> Fuentes estandarizadas y orden de consulta.',
+                    '<strong>Base de precedentes internos:</strong> Documentos etiquetados y fáciles de buscar.',
+                    '<strong>Estructura maestra:</strong> Formato invariable para dar coherencia al despacho.'
+                ],
+                result: '<strong>Resultado:</strong> El tiempo de respuesta mejoró en 50%. El 80% de la investigación se puede delegar a analistas de forma segura, con un <strong style="color:#14120b;border-bottom:2px solid #bda36e;">margen de ganancia mayor</strong>.'
+            },
+            {
+                label: 'CASO DE ESTUDIO // NOTARÍA PÚBLICA',
+                title: '"LA ESCRITURACIÓN SE DETIENE POR FALTA DE DOCUMENTOS"',
+                beforeTag: '[ ANTES: CAOS OPERATIVO ]',
+                beforeIntro: 'Los trámites inmobiliarios sufrían graves retrasos debido a un inicio accidentado:',
+                beforeItems: [
+                    'Se solicitaban los requisitos vía WhatsApp a medida que el abogado se acordaba.',
+                    'El día de la firma faltaba el predial actualizado o la identificación.',
+                    'Firmas reprogramadas, clientes molestos y cuellos de botella.'
+                ],
+                afterTag: '[ DESPUÉS: LA SOLUCIÓN SAKKA 作家 ]',
+                afterIntro: 'Diseñamos un flujo de recopilación infalible y frontal:',
+                afterItems: [
+                    '<strong>Kits de bienvenida:</strong> Un PDF interactivo con todos los requisitos exactos y vigencias.',
+                    '<strong>Filtro de pre-recepción:</strong> El expediente no pasa a redacción si no está 100% completo.',
+                    '<strong>Guion de seguimiento:</strong> Mensajes estandarizados para recordar qué falta.'
+                ],
+                result: '<strong>Resultado:</strong> Relanzamos la operación de firmas; el <strong style="color:#14120b;border-bottom:2px solid #bda36e;">95% de expedientes</strong> llegan completos a la mesa de abogados el primer día.'
+            },
+            {
+                label: 'CASO DE ESTUDIO // FIRMA CONTABLE',
+                title: '"EL CIERRE DE MES ES UNA PESADILLA DE HORAS EXTRAS"',
+                beforeTag: '[ ANTES: CAOS OPERATIVO ]',
+                beforeIntro: 'Los primeros 10 días del mes significaban estrés prolongado y fines de semana trabajando:',
+                beforeItems: [
+                    'Cada contador aplicaba su propio criterio para reclasificar o conciliar cuentas.',
+                    'Las facturas no cuadraban y revisarlas requería cruzar múltiples sistemas.',
+                    'Si un contador se enfermaba, otro tardaba días en entender dónde se había quedado.'
+                ],
+                afterTag: '[ DESPUÉS: LA SOLUCIÓN SAKKA 作家 ]',
+                afterIntro: 'Impusimos disciplina estructural al proceso de contabilidad mensual:',
+                afterItems: [
+                    '<strong>SOP de Cierre:</strong> Manual cronológico detallando la conciliación bancaria y depreciación.',
+                    '<strong>Criterios de Reclasificación:</strong> Matriz que define cómo tratar cada movimiento excepcional.',
+                    '<strong>Control cruzado:</strong> Lista de verificación que el supervisor audita.'
+                ],
+                result: '<strong>Resultado:</strong> El cierre se completa <strong style="color:#14120b;border-bottom:2px solid #bda36e;">3 días antes</strong>. La moral del equipo subió drásticamente al eliminar el trabajo en fines de semana.'
+            }
+        ],
+        jp: [
+            {
+                label: 'ケーススタディ // 会計事務所',
+                title: '「チームは従業員の登録方法を知らない」',
+                beforeTag: '[ 以前：業務の混乱 ]',
+                beforeIntro: 'ある会計事務所の給与部門は、スーパーバイザーの記憶と4通の転送メールに依存していました。新しいクライアントがIMSSへの従業員登録を依頼すると：',
+                beforeItems: [
+                    '不完全な情報がWhatsApp経由で送られていた。',
+                    'インターンが入力していたが、常にInfonavitの源泉徴収通知書を請求し忘れていた。',
+                    '最初の給与計算が誤り、クライアントからクレームが入っていた。'
+                ],
+                afterTag: '[ 以後：SAKKA 作家のソリューション ]',
+                afterIntro: '10日間でプロセスをマッピングし、明確な成果物に集約しました：',
+                afterItems: [
+                    '<strong>クライアントチェックリスト：</strong>RFCとInfonavitが揃うまで手続きを開始しない。',
+                    '<strong>担当者の固定：</strong>画面ごとの明確な担当割り当て。曖昧な依存関係はゼロ。',
+                    '<strong>IDSEビジュアルガイド：</strong>インターンがスーパーバイザーに聞かずにコピー＆ペーストできる最新スクリーンショット。'
+                ],
+                result: '<strong>結果：</strong>給与登録作業が3時間の検証から20分の自律実行に短縮。IDSEのエラーは<strong style="color:#14120b;border-bottom:2px solid #bda36e;">ゼロ</strong>に減少。'
+            },
+            {
+                label: 'ケーススタディ // 法律事務所',
+                title: '「契約書に前のクライアントの名前が残っている」',
+                beforeTag: '[ 以前：業務の混乱 ]',
+                beforeIntro: 'ジュニア弁護士は唯一の情報源がなく、契約書の修正に何時間も費やしていました：',
+                beforeItems: [
+                    '「似ている」契約書をサーバー内で探してそのまま上書きしていた。',
+                    '添付資料の更新を忘れ、古い金額が残っていた。',
+                    'パートナーが一行一行確認し、文体校正者のようになっていた。'
+                ],
+                afterTag: '[ 以後：SAKKA 作家のソリューション ]',
+                afterIntro: '各部門のポジショニングを確立し、条項・テンプレートの知識を一元化した保管庫に集約しました：',
+                afterItems: [
+                    '<strong>マスターリポジトリ：</strong>契約書の種類ごとに1つの公式バージョン。',
+                    '<strong>検証チェックリスト：</strong>署名前に必須の確認ステップ。',
+                    '<strong>意思決定ツリー：</strong>制限的条項と許容的条項の使い分けガイド。'
+                ],
+                result: '<strong>結果：</strong>作成時間が2.5時間から15分に短縮。パートナーは法的戦略のみを確認し、作業負荷が<strong style="color:#14120b;border-bottom:2px solid #bda36e;">80%</strong>削減。'
+            },
+            {
+                label: 'ケーススタディ // 税務コンサルティング',
+                title: '「税務意見書の発行に時間がかかりすぎる」',
+                beforeTag: '[ 以前：業務の混乱 ]',
+                beforeIntro: '税務上の影響分析は職人的な作業で、パートナーへの依存度が非常に高い状態でした：',
+                beforeItems: [
+                    '数ヶ月前に解決済みのテーマを一から調査していた。',
+                    '担当者によって成果物のフォーマットが大きく異なっていた。',
+                    '古いメールから先例を探すのに時間を浪費していた。'
+                ],
+                afterTag: '[ 以後：SAKKA 作家のソリューション ]',
+                afterIntro: '調査・意見書作成プロセスを体系化しました：',
+                afterItems: [
+                    '<strong>調査プレイブック：</strong>標準化された情報源と参照順序。',
+                    '<strong>社内先例データベース：</strong>タグ付けされた検索しやすい文書。',
+                    '<strong>マスター構造：</strong>事務所に一貫性をもたらす固定フォーマット。'
+                ],
+                result: '<strong>結果：</strong>対応時間が50%改善。調査の80%をアナリストに安全に委任でき、<strong style="color:#14120b;border-bottom:2px solid #bda36e;">利益率が向上</strong>。'
+            },
+            {
+                label: 'ケーススタディ // 公証事務所',
+                title: '「書類不足で登記手続きが止まる」',
+                beforeTag: '[ 以前：業務の混乱 ]',
+                beforeIntro: '不動産手続きは不完全なスタートにより深刻な遅延に見舞われていました：',
+                beforeItems: [
+                    '弁護士が思い出すたびにWhatsApp経由で書類を要求していた。',
+                    '署名当日に最新の固定資産税証明書や身分証明書が不足していた。',
+                    '署名の再スケジュール、クライアントの不満、業務のボトルネック。'
+                ],
+                afterTag: '[ 以後：SAKKA 作家のソリューション ]',
+                afterIntro: '確実かつ事前完結型の書類収集フローを設計しました：',
+                afterItems: [
+                    '<strong>ウェルカムキット：</strong>正確な要件と有効期限を記載したインタラクティブPDF。',
+                    '<strong>受付前フィルター：</strong>書類が100%揃わなければ作成段階に進まない。',
+                    '<strong>フォローアップスクリプト：</strong>不足書類を通知する標準化メッセージ。'
+                ],
+                result: '<strong>結果：</strong>署名業務を再始動。<strong style="color:#14120b;border-bottom:2px solid #bda36e;">書類の95%</strong>が初日に完全な状態で弁護士の机に届く。'
+            },
+            {
+                label: 'ケーススタディ // 会計法人',
+                title: '「月次決算は残業地獄だ」',
+                beforeTag: '[ 以前：業務の混乱 ]',
+                beforeIntro: '月初の10日間は長期ストレスと週末出勤を意味していました：',
+                beforeItems: [
+                    '担当者ごとに勘定科目の組み替えや調整の基準が異なっていた。',
+                    '請求書が合わず、複数のシステムをまたいで確認する必要があった。',
+                    '担当者が病欠すると、引き継ぎ者が状況を把握するのに数日かかっていた。'
+                ],
+                afterTag: '[ 以後：SAKKA 作家のソリューション ]',
+                afterIntro: '月次会計プロセスに構造的な規律を導入しました：',
+                afterItems: [
+                    '<strong>決算SOP：</strong>銀行調整と減価償却を詳述した時系列マニュアル。',
+                    '<strong>再分類基準：</strong>例外的な取引の処理方法を定義するマトリクス。',
+                    '<strong>相互チェック：</strong>スーパーバイザーが監査するチェックリスト。'
+                ],
+                result: '<strong>結果：</strong>決算が<strong style="color:#14120b;border-bottom:2px solid #bda36e;">3日早く</strong>完了。週末出勤がなくなりチームの士気が大幅に向上。'
+            }
+        ]
     };
 
-    const linkAviso = document.getElementById('link-aviso');
-    const linkTerminos = document.getElementById('link-terminos');
-    const closeLegal = document.getElementById('close-legal');
-    const legalPanel = document.getElementById('legal-panel');
-    const legalTitle = document.getElementById('legal-title');
-    const legalContent = document.getElementById('legal-content');
+    // =========================================================
+    //  DATOS: PANEL LEGAL — ES + JP
+    // =========================================================
+    var legalContent = {
+        es: {
+            aviso: {
+                title: 'AVISO DE PRIVACIDAD',
+                html: '<div style="font-family:\'Inter\',sans-serif"><p style="margin-bottom:24px;font-weight:500">Esta página explica cómo SAKKA 作家 recopila, utiliza, comparte y protege la información cuando usted utiliza el sitio web y los servicios de SAKKA 作家.</p><p style="margin-bottom:24px">Sakka &amp; Co. inc (la &quot;Empresa&quot;) se compromete a mantener sólidas protecciones de privacidad para sus clientes. Esta Política de Privacidad está diseñada para ayudarle a entender cómo recopilamos, utilizamos y salvaguardamos la información que nos proporciona.</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">1. Información que recopilamos</h3><p style="margin-bottom:16px">Recopilamos tanto &quot;Información No Personal&quot; como &quot;Información Personal&quot;. La Información No Personal incluye datos de uso anónimos. La Información Personal incluye su correo electrónico, nombre e información del despacho enviada a través de los formularios del sitio.</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">2. Cómo utilizamos y compartimos la información</h3><p style="margin-bottom:16px">No vendemos, intercambiamos ni compartimos su Información Personal con fines de marketing sin su consentimiento explícito.</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">3. Cómo protegemos su información</h3><p style="margin-bottom:16px">Implementamos estrictas medidas de seguridad para proteger su información institucional contra el acceso no autorizado mediante el cifrado y la tecnología SSL.</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">4. Cambios y Contacto</h3><p style="margin-bottom:16px">Sakka &amp; Co. inc se reserva el derecho de modificar esta Política. Para cualquier duda, contáctenos en <a href="mailto:hola@manova.mx" style="color:#bda36e;text-decoration:underline">hola@manova.mx</a>.</p></div>'
+            },
+            terminos: {
+                title: 'TÉRMINOS DE SERVICIO',
+                html: '<div style="font-family:\'Inter\',sans-serif"><p style="margin-bottom:24px;font-weight:500">Estos términos rigen su uso del sitio web operado por Sakka &amp; Co. inc y adaptan las pautas comerciales aplicables para nuestros entregables de documentación operativa.</p><p style="margin-bottom:24px">Al acceder o utilizar el Sitio, usted acepta estos Términos en su nombre o en el de la entidad que representa.</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">1. Acceso al Sitio y Cesión de Uso</h3><p style="margin-bottom:16px">Sujeto a estos Términos, la Empresa le otorga una licencia intransferible, no exclusiva, revocable y limitada para usar el Sitio con fines informativos.</p><p style="margin-bottom:16px">Usted tiene prohibido licenciar, vender, alquilar o explotar comercialmente los recursos del Sitio sin nuestro consentimiento formal.</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">2. Contenido del Usuario e Indemnización</h3><p style="margin-bottom:16px">Cualquier material que nos comparta será tratado con estricta confidencialidad. Sin embargo, usted seguirá siendo responsable de cualquier implicación normativa o legal contenida en los materiales originales de su firma.</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">3. Limitación de Responsabilidad</h3><p style="margin-bottom:16px">Toda publicación se proporciona &quot;tal cual&quot;. Sakka &amp; Co. inc asiste en compilar y redactar, pero la implementación final recae sobre la directiva del despacho.</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">4. Resolución de Disputas</h3><p style="margin-bottom:16px">Ambas partes se comprometen a una resolución de buena fe en un plazo de 60 días antes de cualquier demanda judicial. Para aclaraciones escriba a <a href="mailto:hola@manova.mx" style="color:#bda36e;text-decoration:underline">hola@manova.mx</a>.</p></div>'
+            }
+        },
+        jp: {
+            aviso: {
+                title: 'プライバシーポリシー',
+                html: '<div style="font-family:\'Inter\',sans-serif"><p style="margin-bottom:24px;font-weight:500">このページでは、SAKKA 作家がウェブサイトおよびサービスをご利用いただく際に、どのように情報を収集・利用・共有・保護するかをご説明します。</p><p style="margin-bottom:24px">Sakka &amp; Co. inc（以下「会社」）は、専門事務所向け業務文書化の分野においてお客様の個人情報保護に誠実に取り組んでいます。本プライバシーポリシーは、収集・利用・保護の方法をご理解いただくことを目的としています。</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">1. 収集する情報</h3><p style="margin-bottom:16px">「非個人情報」と「個人情報」の両方を収集します。非個人情報には匿名の利用データが含まれます。個人情報には、サイトのフォームからご提供いただくメールアドレス、氏名、事務所情報が含まれます。</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">2. 情報の利用と共有</h3><p style="margin-bottom:16px">お客様の明示的な同意なしに、マーケティング目的で個人情報を販売・交換・共有することはありません。</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">3. 情報の保護</h3><p style="margin-bottom:16px">不正アクセスから機関情報を保護するため、暗号化やSSL技術などの厳格なセキュリティ対策を実施しています。</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">4. 変更とお問い合わせ</h3><p style="margin-bottom:16px">Sakka &amp; Co. inc はいつでも本ポリシーを変更する権利を留保します。ご不明な点は <a href="mailto:hola@manova.mx" style="color:#bda36e;text-decoration:underline">hola@manova.mx</a> までご連絡ください。</p></div>'
+            },
+            terminos: {
+                title: '利用規約',
+                html: '<div style="font-family:\'Inter\',sans-serif"><p style="margin-bottom:24px;font-weight:500">本規約は、Sakka &amp; Co. inc が運営するウェブサイトのご利用、および業務文書化に関する成果物に適用されます。</p><p style="margin-bottom:24px">サイトにアクセスまたはサービスをご利用いただくことで、ご自身または代表する組織を代表して本規約に同意されたものとみなします。</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">1. サイトへのアクセスと利用</h3><p style="margin-bottom:16px">本規約に従い、会社はお客様に対してサイトを情報目的で使用するための非独占的・取り消し可能な限定的ライセンスを付与します。</p><p style="margin-bottom:16px">正式な同意なしに、サイト上のリソースをライセンス・販売・賃貸・商業的に利用することは禁止されています。</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">2. ユーザーコンテンツと補償</h3><p style="margin-bottom:16px">ご提供いただくすべての資料は厳格な守秘義務のもとに取り扱われます。ただし、お客様の事務所の原資料に含まれる法的・規制上の問題については引き続きお客様の責任となります。</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">3. 責任の制限</h3><p style="margin-bottom:16px">すべての成果物は「現状有姿」で提供されます。Sakka &amp; Co. inc はコンパイル・執筆をサポートしますが、最終的な実装は事務所の経営陣の責任となります。</p><h3 style="color:#fff;font-size:18px;margin-top:24px;margin-bottom:12px">4. 紛争解決</h3><p style="margin-bottom:16px">両当事者は、법的措置の前に60日間の誠実交渉による解決に努めます。お問い合わせは <a href="mailto:hola@manova.mx" style="color:#bda36e;text-decoration:underline">hola@manova.mx</a> まで。</p></div>'
+            }
+        }
+    };
 
-    function openLegalPanel(title, content) {
-        legalTitle.innerText = title;
-        legalContent.innerHTML = content;
-        legalPanel.style.display = 'block';
-        setTimeout(() => {
-            legalPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
+    // =========================================================
+    //  ESTADO: idioma activo
+    // =========================================================
+    var currentLang = 'es';
+
+    // =========================================================
+    //  FUNCIÓN: traducir el carousel
+    // =========================================================
+    function renderCarousel(lang) {
+        var slides = carouselData[lang] || carouselData.es;
+        var items  = document.querySelectorAll('.carousel-item');
+        for (var i = 0; i < items.length; i++) {
+            var item = items[i];
+            var t    = slides[i];
+            if (!t) continue;
+
+            var labelEl    = item.querySelector('.cs-header span');
+            var titleEl    = item.querySelector('.cs-header h2');
+            var beforeTag  = item.querySelector('.cs-before h3');
+            var beforeP    = item.querySelector('.cs-before p');
+            var beforeLis  = item.querySelectorAll('.cs-before li');
+            var afterTag   = item.querySelector('.cs-after h3');
+            var afterP     = item.querySelector('.cs-after p');
+            var afterLis   = item.querySelectorAll('.cs-after li');
+            var resultEl   = item.querySelector('.cs-impact p');
+
+            if (labelEl)   labelEl.textContent   = t.label;
+            if (titleEl)   titleEl.textContent   = t.title;
+            if (beforeTag) beforeTag.textContent = t.beforeTag;
+            if (beforeP)   beforeP.textContent   = t.beforeIntro;
+            for (var j = 0; j < beforeLis.length; j++) {
+                if (t.beforeItems[j] != null) beforeLis[j].textContent = t.beforeItems[j];
+            }
+            if (afterTag) afterTag.textContent = t.afterTag;
+            if (afterP)   afterP.textContent   = t.afterIntro;
+            for (var k = 0; k < afterLis.length; k++) {
+                if (t.afterItems[k] != null) afterLis[k].innerHTML = t.afterItems[k];
+            }
+            if (resultEl) resultEl.innerHTML = t.result;
+        }
     }
 
-    if (linkAviso) {
-        linkAviso.addEventListener('click', (e) => {
-            e.preventDefault();
-            openLegalPanel('AVISO DE PRIVACIDAD', legalData.aviso);
-        });
+    // =========================================================
+    //  FUNCIÓN: cambiar idioma de toda la página
+    // =========================================================
+    function setLang(lang) {
+        currentLang = lang;
+
+        /* 1. atributo lang del <html> */
+        var root = document.getElementById('html-root');
+        if (root) root.setAttribute('lang', lang === 'jp' ? 'ja' : 'es');
+
+        /* 2. botones activos */
+        var btnEs = document.getElementById('btn-es');
+        var btnJp = document.getElementById('btn-jp');
+        if (btnEs && btnJp) {
+            if (lang === 'jp') {
+                btnEs.classList.remove('lang-btn--active'); btnEs.setAttribute('aria-pressed', 'false');
+                btnJp.classList.add('lang-btn--active');    btnJp.setAttribute('aria-pressed', 'true');
+            } else {
+                btnJp.classList.remove('lang-btn--active'); btnJp.setAttribute('aria-pressed', 'false');
+                btnEs.classList.add('lang-btn--active');    btnEs.setAttribute('aria-pressed', 'true');
+            }
+        }
+
+        /* 3. Todos los elementos con data-es / data-jp */
+        var els = document.querySelectorAll('[data-es][data-jp]');
+        for (var i = 0; i < els.length; i++) {
+            var el   = els[i];
+            var text = lang === 'jp' ? el.getAttribute('data-jp') : el.getAttribute('data-es');
+            if (text) el.textContent = text;
+        }
+
+        /* 4. Footer links: traducción explícita por ID (refuerzo) */
+        var avisoLink    = document.getElementById('link-aviso');
+        var terminosLink = document.getElementById('link-terminos');
+        if (avisoLink)    avisoLink.textContent    = lang === 'jp' ? 'プライバシーポリシー'  : 'AVISO DE PRIVACIDAD';
+        if (terminosLink) terminosLink.textContent = lang === 'jp' ? '利用規約'              : 'TERMINOS DE SERVICIO';
+
+        /* 5. Carousel */
+        renderCarousel(lang);
     }
 
-    if (linkTerminos) {
-        linkTerminos.addEventListener('click', (e) => {
-            e.preventDefault();
-            openLegalPanel('TÉRMINOS DE SERVICIO', legalData.terminos);
-        });
-    }
+    // =========================================================
+    //  EVENTOS: botones de idioma
+    // =========================================================
+    var btnEs = document.getElementById('btn-es');
+    var btnJp = document.getElementById('btn-jp');
+    if (btnEs) btnEs.addEventListener('click', function () { setLang('es'); });
+    if (btnJp) btnJp.addEventListener('click', function () { setLang('jp'); });
 
-    if (closeLegal) {
-        closeLegal.addEventListener('click', () => {
-            legalPanel.style.display = 'none';
-        });
-    }
-} catch (error) {
-    console.error('Error en la lógica legal:', error);
-}
+    // =========================================================
+    //  CAROUSEL LOGIC (animación de tarjetas)
+    // =========================================================
+    try {
+        var carouselItems = document.querySelectorAll('.carousel-item');
+        if (carouselItems.length > 0) {
+            var activeIndex = 0;
+
+            function updateCarousel() {
+                for (var i = 0; i < carouselItems.length; i++) {
+                    carouselItems[i].classList.remove('active', 'next', 'prev', 'next-shadow', 'prev-shadow');
+                    var diff = (i - activeIndex + carouselItems.length) % carouselItems.length;
+                    if      (diff === 0)                          carouselItems[i].classList.add('active');
+                    else if (diff === 1)                          carouselItems[i].classList.add('next');
+                    else if (diff === 2)                          carouselItems[i].classList.add('next-shadow');
+                    else if (diff === carouselItems.length - 2)  carouselItems[i].classList.add('prev-shadow');
+                    else if (diff === carouselItems.length - 1)  carouselItems[i].classList.add('prev');
+                }
+            }
+
+            var nextBtn = document.querySelector('.next-btn');
+            var prevBtn = document.querySelector('.prev-btn');
+            if (nextBtn) nextBtn.addEventListener('click', function () { activeIndex = (activeIndex + 1) % carouselItems.length; updateCarousel(); });
+            if (prevBtn) prevBtn.addEventListener('click', function () { activeIndex = (activeIndex - 1 + carouselItems.length) % carouselItems.length; updateCarousel(); });
+
+            for (var ci = 0; ci < carouselItems.length; ci++) {
+                (function (item) {
+                    item.addEventListener('click', function () {
+                        if (item.classList.contains('prev') || item.classList.contains('prev-shadow')) {
+                            activeIndex = (activeIndex - 1 + carouselItems.length) % carouselItems.length;
+                            updateCarousel();
+                        } else if (item.classList.contains('next') || item.classList.contains('next-shadow')) {
+                            activeIndex = (activeIndex + 1) % carouselItems.length;
+                            updateCarousel();
+                        }
+                    });
+                }(carouselItems[ci]));
+            }
+            updateCarousel();
+        }
+    } catch (err) { console.error('Carousel error:', err); }
+
+    // =========================================================
+    //  LEGAL PANEL LOGIC
+    // =========================================================
+    try {
+        var linkAviso      = document.getElementById('link-aviso');
+        var linkTerminos   = document.getElementById('link-terminos');
+        var closeLegalBtn  = document.getElementById('close-legal');
+        var legalPanel     = document.getElementById('legal-panel');
+        var legalTitleEl   = document.getElementById('legal-title');
+        var legalContentEl = document.getElementById('legal-content');
+
+        function openLegalPanel(key) {
+            var lang   = currentLang;
+            var data   = (legalContent[lang] || legalContent.es)[key];
+            legalTitleEl.innerText      = data.title;
+            legalContentEl.innerHTML    = data.html;
+            legalPanel.style.display    = 'block';
+            setTimeout(function () {
+                legalPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+
+        if (linkAviso)   linkAviso.addEventListener('click',   function (e) { e.preventDefault(); openLegalPanel('aviso'); });
+        if (linkTerminos) linkTerminos.addEventListener('click', function (e) { e.preventDefault(); openLegalPanel('terminos'); });
+        if (closeLegalBtn) closeLegalBtn.addEventListener('click', function () { legalPanel.style.display = 'none'; });
+    } catch (err) { console.error('Legal panel error:', err); }
+
+}());
