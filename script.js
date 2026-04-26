@@ -393,3 +393,117 @@ try {
     document.getElementById('link-terminos')?.addEventListener('click',  e => { e.preventDefault(); openLegalPanel('terminos'); });
     document.getElementById('close-legal')?.addEventListener('click',   () => { if (legalPanel) legalPanel.style.display = 'none'; });
 } catch (err) { console.error('Legal panel:', err); }
+
+// =============================================================
+//  MOBILE MENU
+// =============================================================
+try {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+} catch (err) { console.error('Mobile menu:', err); }
+
+// =============================================================
+//  SMOOTH SCROLL FOR ANCHOR LINKS
+// =============================================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            e.preventDefault();
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// =============================================================
+//  FAQ ACCORDION
+// =============================================================
+try {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question?.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all other items
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+} catch (err) { console.error('FAQ:', err); }
+
+// =============================================================
+//  VIDEO PLAYER
+// =============================================================
+try {
+    const videoOverlays = document.querySelectorAll('.video-overlay');
+    
+    videoOverlays.forEach(overlay => {
+        overlay.addEventListener('click', () => {
+            const container = overlay.closest('.video-content, .video-wrapper');
+            const iframe = container?.querySelector('iframe');
+            
+            if (iframe && iframe.dataset.src) {
+                // Load the actual video
+                iframe.src = iframe.dataset.src + '&autoplay=1';
+                iframe.classList.add('loaded');
+                overlay.classList.add('hidden');
+            }
+        });
+    });
+} catch (err) { console.error('Video player:', err); }
+
+// =============================================================
+//  INTERSECTION OBSERVER FOR ANIMATIONS
+// =============================================================
+try {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe feature blocks and other animated elements
+    document.querySelectorAll('.feature-block, .problem-card, .process-step, .pricing-card').forEach(el => {
+        observer.observe(el);
+    });
+} catch (err) { console.error('Intersection observer:', err); }
