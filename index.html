@@ -4,29 +4,27 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SAKKA 作家 — SaaS de Agentes de IA para Documentación Operativa | 事務所向け業務文書化SaaS</title>
-    <meta name="description" content="Plataforma SaaS de agentes de IA para documentación operativa. Escribimos, reestructuramos y mantenemos la documentación de tu despacho profesional. Agentes de IA. Criterio humano." />
+    <title>SAKKA 作家 — SaaS de Agentes de IA para Documentación Operativa</title>
+    <meta name="description" content="Plataforma SaaS de agentes de IA para documentación operativa. Escribimos, reestructuramos y mantenemos la documentación de tu despacho profesional." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 </head>
 
 <body>
 
+    <!-- NAV -->
     <nav>
         <a href="#" class="nav-logo">
             <span class="nav-logo-text">SAKKA 作家</span>
         </a>
         <div class="nav-center">
             <div class="nav-links">
-                <a href="#features" data-es="CARACTERÍSTICAS" data-jp="機能">CARACTERÍSTICAS</a>
-                <a href="#demo" data-es="DEMO" data-jp="デモ">DEMO</a>
-                <a href="#pricing" data-es="PRECIOS" data-jp="価格">PRECIOS</a>
-                <a href="#proceso" data-es="PROCESO" data-jp="プロセス">PROCESO</a>
+                <a href="#producto" data-es="PRODUCTO" data-jp="製品">PRODUCTO</a>
+                <a href="#como-funciona" data-es="CÓMO FUNCIONA" data-jp="仕組み">CÓMO FUNCIONA</a>
+                <a href="#precios" data-es="PRECIOS" data-jp="価格">PRECIOS</a>
             </div>
             <div class="lang-switcher" role="group" aria-label="Seleccionar idioma">
                 <button id="btn-es" class="lang-btn lang-btn--active" aria-pressed="true">ES</button>
@@ -36,714 +34,469 @@
         </div>
         <div class="nav-right">
             <a href="#" class="nav-link-login" data-es="INICIAR SESIÓN" data-jp="ログイン">INICIAR SESIÓN</a>
-            <a href="https://cal.com/joseph-hendershot/reunion-de-15-min" class="nav-cta" data-es="PRUEBA GRATIS"
-                data-jp="無料体験">PRUEBA GRATIS</a>
+            <a href="https://cal.com/joseph-hendershot/reunion-de-15-min" class="nav-cta" data-es="PRUEBA GRATIS" data-jp="無料体験">PRUEBA GRATIS</a>
         </div>
     </nav>
 
-    <!-- Mobile Menu Button -->
+    <!-- MOBILE MENU -->
     <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
         <span></span>
         <span></span>
         <span></span>
     </button>
-
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
-        <a href="#features" data-es="CARACTERÍSTICAS" data-jp="機能">CARACTERÍSTICAS</a>
-        <a href="#demo" data-es="DEMO" data-jp="デモ">DEMO</a>
-        <a href="#pricing" data-es="PRECIOS" data-jp="価格">PRECIOS</a>
-        <a href="#proceso" data-es="PROCESO" data-jp="プロセス">PROCESO</a>
+        <a href="#producto" data-es="PRODUCTO" data-jp="製品">PRODUCTO</a>
+        <a href="#como-funciona" data-es="CÓMO FUNCIONA" data-jp="仕組み">CÓMO FUNCIONA</a>
+        <a href="#precios" data-es="PRECIOS" data-jp="価格">PRECIOS</a>
         <a href="#" data-es="INICIAR SESIÓN" data-jp="ログイン">INICIAR SESIÓN</a>
         <a href="https://cal.com/joseph-hendershot/reunion-de-15-min" class="mobile-cta" data-es="PRUEBA GRATIS" data-jp="無料体験">PRUEBA GRATIS</a>
     </div>
 
-    <div class="hero">
-        <p class="hero-eyebrow" data-es="SAAS DE AGENTES DE IA · DOCUMENTACIÓN OPERATIVA PARA DESPACHOS PROFESIONALES"
-            data-jp="AIエージェントSaaS・専門事務所向け業務文書化">SAAS DE AGENTES DE IA · DOCUMENTACIÓN OPERATIVA PARA DESPACHOS
-            PROFESIONALES</p>
-
-        <h1 data-es="ESCRIBIMOS, REESTRUCTURAMOS Y MANTENEMOS LA DOCUMENTACIÓN OPERATIVA DE TU DESPACHO PROFESIONAL. AGENTES DE IA. CRITERIO HUMANO."
-            data-jp="あなたの専門事務所の業務文書を作成、再構築し、維持します。AIエージェント。人間の判断。">ESCRIBIMOS, REESTRUCTURAMOS Y MANTENEMOS LA
-            DOCUMENTACIÓN OPERATIVA DE TU DESPACHO PROFESIONAL. AGENTES DE IA. CRITERIO HUMANO.</h1>
-        <p class="hero-body"
-            data-es="Somos un estudio nativo de IA: agentes que auditan y construyen a escala, consultores que piensan y deciden. Construimos documentación operativa estructurada para que tu despacho opere con precisión, retenga talento y aparezca como referente cuando tus clientes buscan en ChatGPT, Perplexity o Google. Entregamos en menos de 15 días hábiles."
-            data-jp="私たちはAIネイティブスタジオです：大規模に監査・構築するエージェントと、思考し判断するコンサルタント。あなたの事務所が精密に運営され、優秀な人材を確保し、ChatGPT・Perplexity・Googleで権威として引用されるための、体系的な業務文書を構築します。15営業日以内に納品。">
-            Somos un estudio nativo de IA: agentes que auditan y construyen a escala, consultores que
-            piensan y deciden. Construimos documentación operativa estructurada para que tu despacho opere con
-            precisión, retenga talento y aparezca como referente cuando tus clientes buscan en ChatGPT, Perplexity o
-            Google. Entregamos en menos de 15 días hábiles.</p>
-        <div class="hero-actions">
-            <a href="https://cal.com/joseph-hendershot/reunion-de-15-min" class="btn-primary"
-                data-es="COMENZAR PRUEBA GRATIS" data-jp="無料体験を開始">COMENZAR PRUEBA GRATIS</a>
-            <a href="#demo" class="btn-dark"
-                data-es="VER DEMO" data-jp="デモを見る">VER DEMO</a>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-eyebrow" data-es="SAAS DE AGENTES DE IA · DOCUMENTACIÓN OPERATIVA" data-jp="AIエージェントSaaS・業務文書化">SAAS DE AGENTES DE IA · DOCUMENTACIÓN OPERATIVA</p>
+                <h1 data-es="ESCRIBIMOS, REESTRUCTURAMOS Y MANTENEMOS LA DOCUMENTACIÓN OPERATIVA DE TU DESPACHO PROFESIONAL." data-jp="あなたの専門事務所の業務文書を作成、再構築し、維持します。">ESCRIBIMOS, REESTRUCTURAMOS Y MANTENEMOS LA DOCUMENTACIÓN OPERATIVA DE TU DESPACHO PROFESIONAL.</h1>
+                <p class="hero-subtitle" data-es="AGENTES DE IA. CRITERIO HUMANO." data-jp="AIエージェント。人間の判断。">AGENTES DE IA. CRITERIO HUMANO.</p>
+                <p class="hero-body" data-es="Somos un estudio nativo de IA: agentes que auditan y construyen a escala, consultores que piensan y deciden. Construimos documentación operativa estructurada para que tu despacho opere con precisión, retenga talento y aparezca como referente cuando tus clientes buscan en ChatGPT, Perplexity o Google. Entregamos en menos de 15 días hábiles." data-jp="私たちはAIネイティブスタジオです：大規模に監査・構築するエージェントと、思考し判断するコンサルタント。あなたの事務所が精密に運営され、優秀な人材を確保し、ChatGPT・Perplexity・Googleで権威として引用されるための、体系的な業務文書を構築します。15営業日以内に納品。">Somos un estudio nativo de IA: agentes que auditan y construyen a escala, consultores que piensan y deciden. Construimos documentación operativa estructurada para que tu despacho opere con precisión, retenga talento y aparezca como referente cuando tus clientes buscan en ChatGPT, Perplexity o Google. Entregamos en menos de 15 días hábiles.</p>
+                <div class="hero-ctas">
+                    <a href="https://cal.com/joseph-hendershot/reunion-de-15-min" class="btn-primary" data-es="COMENZAR AHORA" data-jp="今すぐ始める">COMENZAR AHORA</a>
+                    <a href="#demo-video" class="btn-outline" data-es="VER DEMO" data-jp="デモを見る">VER DEMO</a>
+                </div>
+                <div class="hero-trust">
+                    <span data-es="Sin tarjeta requerida" data-jp="カード不要">Sin tarjeta requerida</span>
+                    <span class="trust-dot"></span>
+                    <span data-es="15 días de entrega" data-jp="15日で納品">15 días de entrega</span>
+                    <span class="trust-dot"></span>
+                    <span data-es="Soporte humano" data-jp="人的サポート">Soporte humano</span>
+                </div>
+            </div>
+            <div class="hero-media">
+                <div class="hero-video-container" id="demo-video">
+                    <div class="video-placeholder">
+                        <div class="video-browser-bar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url">app.sakka.ai/dashboard</div>
+                        </div>
+                        <div class="video-content">
+                            <!-- VIDEO EMBED PLACEHOLDER -->
+                            <iframe 
+                                src="about:blank" 
+                                data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&modestbranding=1"
+                                title="SAKKA Demo"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                            <div class="video-overlay">
+                                <button class="play-button" aria-label="Reproducir video">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                                <span class="video-label" data-es="Ver demostración" data-jp="デモを見る">Ver demostración</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="hero-badges">
-            <div class="hero-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                <span data-es="Sin tarjeta de crédito" data-jp="クレジットカード不要">Sin tarjeta de crédito</span>
-            </div>
-            <div class="hero-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                <span data-es="Configuración en 5 minutos" data-jp="5分でセットアップ">Configuración en 5 minutos</span>
-            </div>
-            <div class="hero-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                <span data-es="Soporte 24/7" data-jp="24時間サポート">Soporte 24/7</span>
-            </div>
-        </div>
-    </div>
+    </section>
 
-    <div class="clients-wrap">
-        <p class="clients-label" data-es="Confían en nosotros" data-jp="信頼されています">Confían en nosotros</p>
+    <!-- LOGOS MARQUEE -->
+    <section class="logos-section">
+        <p class="logos-label" data-es="CONFÍAN EN NOSOTROS" data-jp="信頼されています">CONFÍAN EN NOSOTROS</p>
         <div class="marquee">
             <div class="marquee-track" id="track">
-                <div class="marquee-item">
-                    <span class="client-name">Santamarina + Steta</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-                <div class="marquee-item">
-                    <span class="client-name">Von Wobeser y Sierra</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-                <div class="marquee-item">
-                    <span class="client-name">Chevez Ruiz Zamarripa</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-                <div class="marquee-item">
-                    <span class="client-name">Ritch Mueller</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-                <div class="marquee-item">
-                    <span class="client-name">Creel Abogados</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-                <div class="marquee-item">
-                    <span class="client-name">Deloitte México</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-                <div class="marquee-item">
-                    <span class="client-name">KPMG México</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-                <div class="marquee-item">
-                    <span class="client-name">BDO México</span>
-                    <span class="marquee-sep">+</span>
-                </div>
+                <div class="marquee-item"><span class="client-name">Santamarina + Steta</span><span class="marquee-sep">+</span></div>
+                <div class="marquee-item"><span class="client-name">Von Wobeser y Sierra</span><span class="marquee-sep">+</span></div>
+                <div class="marquee-item"><span class="client-name">Chevez Ruiz Zamarripa</span><span class="marquee-sep">+</span></div>
+                <div class="marquee-item"><span class="client-name">Ritch Mueller</span><span class="marquee-sep">+</span></div>
+                <div class="marquee-item"><span class="client-name">Creel Abogados</span><span class="marquee-sep">+</span></div>
+                <div class="marquee-item"><span class="client-name">Deloitte México</span><span class="marquee-sep">+</span></div>
+                <div class="marquee-item"><span class="client-name">KPMG México</span><span class="marquee-sep">+</span></div>
+                <div class="marquee-item"><span class="client-name">BDO México</span><span class="marquee-sep">+</span></div>
             </div>
             <div class="marquee-track" aria-hidden="true">
-                <div class="marquee-item">
-                    <span class="client-name">Santamarina + Steta</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-                <div class="marquee-item">
-                    <span class="client-name">Von Wobeser y Sierra</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-                <div class="marquee-item">
-                    <span class="client-name">Chevez Ruiz Zamarripa</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-                <div class="marquee-item">
-                    <span class="client-name">Ritch Mueller</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-                <div class="marquee-item">
-                    <span class="client-name">Creel Abogados</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-                <div class="marquee-item">
-                    <span class="client-name">Deloitte México</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-                <div class="marquee-item">
-                    <span class="client-name">KPMG México</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-                <div class="marquee-item">
-                    <span class="client-name">BDO México</span>
-                    <span class="marquee-sep">+</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- DEMO VIDEO SECTION -->
-    <section id="demo" class="demo-section">
-        <p class="bracket-label" data-es="[ DEMO DE LA PLATAFORMA ]" data-jp="[ プラットフォームデモ ]">[ DEMO DE LA PLATAFORMA ]</p>
-        <h2 class="demo-title" data-es="MIRA CÓMO NUESTROS AGENTES TRANSFORMAN TU DOCUMENTACIÓN"
-            data-jp="AIエージェントがあなたの文書を変革する様子をご覧ください">MIRA CÓMO NUESTROS AGENTES TRANSFORMAN TU DOCUMENTACIÓN</h2>
-        <p class="demo-subtitle" data-es="Observa en tiempo real cómo los agentes de IA auditan, reestructuran y mantienen la documentación de tu despacho." data-jp="AIエージェントがあなたの事務所の文書を監査、再構築、維持する様子をリアルタイムでご覧ください。">Observa en tiempo real cómo los agentes de IA auditan, reestructuran y mantienen la documentación de tu despacho.</p>
-        
-        <div class="demo-video-container">
-            <div class="demo-video-placeholder">
-                <div class="demo-play-btn">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-                <div class="demo-video-label" data-es="Click para ver demo" data-jp="クリックしてデモを表示">Click para ver demo</div>
-                <div class="demo-browser-chrome">
-                    <div class="demo-browser-dots">
-                        <span></span><span></span><span></span>
-                    </div>
-                    <div class="demo-browser-url">app.sakka.ai/dashboard</div>
-                </div>
-                <div class="demo-screen-content">
-                    <div class="demo-sidebar">
-                        <div class="demo-sidebar-item active"></div>
-                        <div class="demo-sidebar-item"></div>
-                        <div class="demo-sidebar-item"></div>
-                        <div class="demo-sidebar-item"></div>
-                    </div>
-                    <div class="demo-main">
-                        <div class="demo-header-bar"></div>
-                        <div class="demo-content-lines">
-                            <div class="demo-line w80"></div>
-                            <div class="demo-line w60"></div>
-                            <div class="demo-line w90"></div>
-                            <div class="demo-line w70"></div>
-                            <div class="demo-line w50"></div>
-                        </div>
-                        <div class="demo-ai-indicator">
-                            <span class="demo-ai-dot"></span>
-                            <span data-es="Agente analizando..." data-jp="エージェント分析中...">Agente analizando...</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="demo-features">
-            <div class="demo-feature">
-                <div class="demo-feature-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                </div>
-                <h4 data-es="Auditoría Automática" data-jp="自動監査">Auditoría Automática</h4>
-                <p data-es="Los agentes rastrean y analizan toda tu documentación existente." data-jp="エージェントが既存の全文書を追跡・分析します。">Los agentes rastrean y analizan toda tu documentación existente.</p>
-            </div>
-            <div class="demo-feature">
-                <div class="demo-feature-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
-                </div>
-                <h4 data-es="Redacción Inteligente" data-jp="インテリジェント執筆">Redacción Inteligente</h4>
-                <p data-es="Generación de borradores con tono de voz personalizado para tu marca." data-jp="ブランドに合わせたトーンでドラフトを生成します。">Generación de borradores con tono de voz personalizado para tu marca.</p>
-            </div>
-            <div class="demo-feature">
-                <div class="demo-feature-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
-                </div>
-                <h4 data-es="Verificación Normativa" data-jp="規制検証">Verificación Normativa</h4>
-                <p data-es="Validación automática contra SAT, IMSS, Infonavit y legislación vigente." data-jp="SAT、IMSS、Infonavitおよび現行法令に対する自動検証。">Validación automática contra SAT, IMSS, Infonavit y legislación vigente.</p>
+                <div class="marquee-item"><span class="client-name">Santamarina + Steta</span><span class="marquee-sep">+</span></div>
+                <div class="marquee-item"><span class="client-name">Von Wobeser y Sierra</span><span class="marquee-sep">+</span></div>
+                <div class="marquee-item"><span class="client-name">Chevez Ruiz Zamarripa</span><span class="marquee-sep">+</span></div>
+                <div class="marquee-item"><span class="client-name">Ritch Mueller</span><span class="marquee-sep">+</span></div>
+                <div class="marquee-item"><span class="client-name">Creel Abogados</span><span class="marquee-sep">+</span></div>
+                <div class="marquee-item"><span class="client-name">Deloitte México</span><span class="marquee-sep">+</span></div>
+                <div class="marquee-item"><span class="client-name">KPMG México</span><span class="marquee-sep">+</span></div>
+                <div class="marquee-item"><span class="client-name">BDO México</span><span class="marquee-sep">+</span></div>
             </div>
         </div>
     </section>
 
-    <!-- PROBLEMS SECTION -->
-    <section id="problems">
-        <p class="problems-title" data-es="[ El estado de la documentación en la mayoría de los despachos ]"
-            data-jp="[ ほとんどの事務所における文書の現状 ]">[ El estado de la documentación en la mayoría de los despachos ]</p>
-        <div class="problems-grid">
+    <!-- PROBLEMA -->
+    <section class="problem-section">
+        <div class="section-header">
+            <span class="section-tag" data-es="[ EL PROBLEMA ]" data-jp="[ 問題 ]">[ EL PROBLEMA ]</span>
+            <h2 data-es="EL ESTADO DE LA DOCUMENTACIÓN EN LA MAYORÍA DE LOS DESPACHOS" data-jp="ほとんどの事務所における文書の現状">EL ESTADO DE LA DOCUMENTACIÓN EN LA MAYORÍA DE LOS DESPACHOS</h2>
+        </div>
+        <div class="problem-grid">
             <div class="problem-card">
-                <div class="p-num">01</div>
-                <h3 data-es="Tu documentación siempre va detrás de tu operación" data-jp="文書化は常に業務の後手に回っている">Tu
-                    documentación siempre va detrás de tu operación</h3>
-                <p data-es="Tu despacho crece, contratas personas, abres nuevas áreas. Pero cada cambio deja los manuales un poco más atrás. Los socios dicen que lo van a actualizar, pero todos sabemos que la operación no espera. El resultado: procesos que viven en la cabeza de una sola persona."
-                    data-jp="事務所は成長し、人を雇い、新しい部門を開設します。しかし変化のたびにマニュアルは置き去りにされます。パートナーは更新すると言いますが、業務は待ってくれません。結果：プロセスは一人の頭の中にしか存在しない。">
-                    Tu despacho crece, contratas personas, abres nuevas áreas. Pero cada cambio deja los manuales un
-                    poco
-                    más atrás. Los socios dicen que lo van a actualizar, pero todos sabemos que la operación no espera.
-                    El resultado: procesos que viven en la cabeza de una sola persona.</p>
+                <span class="problem-num">01</span>
+                <h3 data-es="Tu documentación siempre va detrás de tu operación" data-jp="文書化は常に業務の後手に回っている">Tu documentación siempre va detrás de tu operación</h3>
+                <p data-es="Tu despacho crece, contratas personas, abres nuevas áreas. Pero cada cambio deja los manuales un poco más atrás. Los socios dicen que lo van a actualizar, pero todos sabemos que la operación no espera. El resultado: procesos que viven en la cabeza de una sola persona." data-jp="事務所は成長し、人を雇い、新しい部門を開設します。しかし変化のたびにマニュアルは置き去りにされます。パートナーは更新すると言いますが、業務は待ってくれません。結果：プロセスは一人の頭の中にしか存在しない。">Tu despacho crece, contratas personas, abres nuevas áreas. Pero cada cambio deja los manuales un poco más atrás. Los socios dicen que lo van a actualizar, pero todos sabemos que la operación no espera. El resultado: procesos que viven en la cabeza de una sola persona.</p>
             </div>
             <div class="problem-card">
-                <div class="p-num">02</div>
-                <h3 data-es="La documentación operativa es un canal de crecimiento infrautilizado"
-                    data-jp="業務文書化は活用されていない成長チャンネル">La documentación operativa es un canal de crecimiento infrautilizado
-                </h3>
-                <p data-es="Un manual claro reduce la rotación, acelera el onboarding y proyecta profesionalismo ante clientes y auditores. La documentación no es gasto operativo — es marketing, es ventas y es retención. Casi ningún despacho en México lo está haciendo bien."
-                    data-jp="明確なマニュアルは離職率を下げ、オンボーディングを加速させ、クライアントや監査人に対してプロフェッショナリズムを示します。文書化は運営コストではなく、マーケティングであり、営業であり、人材定着です。メキシコのほとんどの事務所はこれを正しく行っていません。">
-                    Un manual claro reduce la rotación, acelera el onboarding y proyecta profesionalismo ante clientes y
-                    auditores. La documentación no es gasto operativo — es marketing, es ventas y es retención. Casi
-                    ningún despacho en México lo está haciendo bien.</p>
+                <span class="problem-num">02</span>
+                <h3 data-es="La documentación operativa es un canal de crecimiento infrautilizado" data-jp="業務文書化は活用されていない成長チャンネル">La documentación operativa es un canal de crecimiento infrautilizado</h3>
+                <p data-es="Un manual claro reduce la rotación, acelera el onboarding y proyecta profesionalismo ante clientes y auditores. La documentación no es gasto operativo — es marketing, es ventas y es retención. Casi ningún despacho en México lo está haciendo bien." data-jp="明確なマニュアルは離職率を下げ、オンボーディングを加速させ、クライアントや監査人に対してプロフェッショナリズムを示します。文書化は運営コストではなく、マーケティングであり、営業であり、人材定着です。メキシコのほとんどの事務所はこれを正しく行っていません。">Un manual claro reduce la rotación, acelera el onboarding y proyecta profesionalismo ante clientes y auditores. La documentación no es gasto operativo — es marketing, es ventas y es retención. Casi ningún despacho en México lo está haciendo bien.</p>
             </div>
             <div class="problem-card">
-                <div class="p-num">03</div>
-                <h3 data-es="Tu despacho es invisible cuando alguien le pregunta a ChatGPT"
-                    data-jp="ChatGPTで検索されてもあなたの事務所は存在しない">Tu despacho es invisible cuando alguien le pregunta a ChatGPT
-                </h3>
-                <p data-es='Cuando un cliente potencial le pregunta a un modelo de IA "¿cómo dar de alta empleados al IMSS?" o "¿qué buscar en un despacho contable?", la respuesta no incluye a tu firma. La documentación estructurada y bien escrita es lo que hace que los motores de IA te citen como referente.'
-                    data-jp="見込みクライアントがAIに「IMSS従業員登録の方法は？」や「会計事務所を選ぶポイントは？」と尋ねても、あなたの事務所は回答に含まれません。構造化された良質な文書こそが、AIエンジンにあなたを権威として引用させるものです。">
-                    Cuando un cliente potencial le pregunta a un modelo de IA "¿cómo dar de alta empleados al IMSS?" o
-                    "¿qué buscar en un despacho contable?", la respuesta no incluye a tu firma. La documentación
-                    estructurada y bien escrita es lo que hace que los motores de IA te citen como referente.</p>
+                <span class="problem-num">03</span>
+                <h3 data-es="Tu despacho es invisible cuando alguien le pregunta a ChatGPT" data-jp="ChatGPTで検索されてもあなたの事務所は存在しない">Tu despacho es invisible cuando alguien le pregunta a ChatGPT</h3>
+                <p data-es='Cuando un cliente potencial le pregunta a un modelo de IA "¿cómo dar de alta empleados al IMSS?" o "¿qué buscar en un despacho contable?", la respuesta no incluye a tu firma. La documentación estructurada y bien escrita es lo que hace que los motores de IA te citen como referente.' data-jp="見込みクライアントがAIに「IMSS従業員登録の方法は？」や「会計事務所を選ぶポイントは？」と尋ねても、あなたの事務所は回答に含まれません。構造化された良質な文書こそが、AIエンジンにあなたを権威として引用させるものです。">Cuando un cliente potencial le pregunta a un modelo de IA "¿cómo dar de alta empleados al IMSS?" o "¿qué buscar en un despacho contable?", la respuesta no incluye a tu firma. La documentación estructurada y bien escrita es lo que hace que los motores de IA te citen como referente.</p>
             </div>
             <div class="problem-card">
-                <div class="p-num">04</div>
-                <h3 data-es="No sabes cómo luce buena documentación operativa" data-jp="優れた業務文書がどのようなものか分からない">No sabes
-                    cómo luce buena documentación operativa</h3>
-                <p data-es="Sabes que la tuya no está bien, pero no tienes un benchmark claro. ¿Qué debe tener un manual de procedimientos? ¿Cómo se estructura un índice operativo? ¿Qué hace que un documento sea legible por personas y por máquinas al mismo tiempo? Es difícil arreglar lo que no puedes medir."
-                    data-jp="現状が良くないのは分かっていても、明確な基準がありません。手続きマニュアルには何が必要か？業務インデックスはどう構成すべきか？人間にもAIにも読みやすい文書とは何か？測定できないものを改善するのは難しいのです。">
-                    Sabes que la tuya no está bien, pero no tienes un benchmark claro. ¿Qué debe tener un manual de
-                    procedimientos? ¿Cómo se estructura un índice operativo? ¿Qué hace que un documento sea legible por
-                    personas y por máquinas al mismo tiempo? Es difícil arreglar lo que no puedes medir.</p>
+                <span class="problem-num">04</span>
+                <h3 data-es="No sabes cómo luce buena documentación operativa" data-jp="優れた業務文書がどのようなものか分からない">No sabes cómo luce buena documentación operativa</h3>
+                <p data-es="Sabes que la tuya no está bien, pero no tienes un benchmark claro. ¿Qué debe tener un manual de procedimientos? ¿Cómo se estructura un índice operativo? ¿Qué hace que un documento sea legible por personas y por máquinas al mismo tiempo? Es difícil arreglar lo que no puedes medir." data-jp="現状が良くないのは分かっていても、明確な基準がありません。手続きマニュアルには何が必要か？業務インデックスはどう構成すべきか？人間にもAIにも読みやすい文書とは何か？測定できないものを改善するのは難しいのです。">Sabes que la tuya no está bien, pero no tienes un benchmark claro. ¿Qué debe tener un manual de procedimientos? ¿Cómo se estructura un índice operativo? ¿Qué hace que un documento sea legible por personas y por máquinas al mismo tiempo? Es difícil arreglar lo que no puedes medir.</p>
             </div>
         </div>
     </section>
 
-    <!-- FEATURES SECTION -->
-    <section id="features">
-        <p class="bracket-label" data-es="[ CARACTERÍSTICAS DE LA PLATAFORMA ]" data-jp="[ プラットフォームの機能 ]">[ CARACTERÍSTICAS DE LA PLATAFORMA ]</p>
-        <h2 class="services-title" data-es="TODO LO QUE NECESITAS PARA DOCUMENTAR TU DESPACHO" data-jp="事務所の文書化に必要なすべて">
-            TODO LO QUE NECESITAS PARA DOCUMENTAR TU DESPACHO</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M12 2a10 10 0 1 0 10 10"/>
-                        <path d="M12 12V6"/>
-                        <path d="M12 12l6-6"/>
-                        <circle cx="12" cy="12" r="2"/>
-                    </svg>
+    <!-- PRODUCTO -->
+    <section id="producto" class="product-section">
+        <div class="section-header centered">
+            <span class="section-tag" data-es="[ LA SOLUCIÓN ]" data-jp="[ ソリューション ]">[ LA SOLUCIÓN ]</span>
+            <h2 data-es="UNA PLATAFORMA DE AGENTES DE IA QUE TRABAJA MIENTRAS TÚ OPERAS" data-jp="あなたが業務する間、AIエージェントが働くプラットフォーム">UNA PLATAFORMA DE AGENTES DE IA QUE TRABAJA MIENTRAS TÚ OPERAS</h2>
+            <p class="section-subtitle" data-es="Nuestros agentes auditan, redactan y mantienen tu documentación operativa con supervisión humana experta." data-jp="当社のエージェントは、専門家の人間による監督のもと、業務文書を監査、執筆、維持します。">Nuestros agentes auditan, redactan y mantienen tu documentación operativa con supervisión humana experta.</p>
+        </div>
+
+        <!-- FEATURE 1: AUDITORÍA -->
+        <div class="feature-block">
+            <div class="feature-media">
+                <div class="screenshot-container">
+                    <!-- SCREENSHOT/VIDEO SPACE -->
+                    <div class="screenshot-placeholder">
+                        <img src="https://placehold.co/800x500/1a1812/2e2d29?text=Captura+de+Auditoría" alt="Captura de pantalla del módulo de auditoría" loading="lazy" />
+                    </div>
+                    <div class="screenshot-badge" data-es="Auditoría en tiempo real" data-jp="リアルタイム監査">Auditoría en tiempo real</div>
                 </div>
-                <h3 data-es="Agentes de Auditoría 24/7" data-jp="24時間監査エージェント">Agentes de Auditoría 24/7</h3>
-                <p data-es="Nuestros agentes rastrean tus manuales, carpetas y canales internos para identificar brechas y contradicciones a una escala que ningún equipo humano puede igualar." data-jp="エージェントがマニュアル、フォルダ、社内チャンネルを監視し、人間チームが及ばない規模でギャップや矛盾を特定します。">Nuestros agentes rastrean tus manuales, carpetas y canales internos para identificar brechas y contradicciones a una escala que ningún equipo humano puede igualar.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <path d="M14 2v6h6"/>
-                        <path d="M16 13H8"/>
-                        <path d="M16 17H8"/>
-                        <path d="M10 9H8"/>
-                    </svg>
-                </div>
-                <h3 data-es="Arquitectura Inteligente" data-jp="インテリジェントアーキテクチャ">Arquitectura Inteligente</h3>
-                <p data-es="Diseñamos automáticamente la estructura que lleva a un colaborador nuevo de cero a productivo. Índices optimizados para humanos y para IA." data-jp="新入社員をゼロから即戦力へと導く構造を自動設計。人間とAI両方に最適化されたインデックス。">Diseñamos automáticamente la estructura que lleva a un colaborador nuevo de cero a productivo. Índices optimizados para humanos y para IA.</p>
+            <div class="feature-text">
+                <span class="feature-tag" data-es="AGENTE DE AUDITORÍA" data-jp="監査エージェント">AGENTE DE AUDITORÍA</span>
+                <h3 data-es="Auditoría Diagnóstica 24/7" data-jp="24時間診断監査">Auditoría Diagnóstica 24/7</h3>
+                <p data-es="Nuestros agentes rastrean tus manuales, carpetas y canales internos para identificar brechas y contradicciones. Recibes un Índice de Madurez Documental con cada gap mapeado: vacíos, duplicados, inconsistencias y documentos obsoletos." data-jp="当社のエージェントは、あなたのマニュアル、フォルダ、内部チャンネルを追跡し、ギャップと矛盾を特定します。文書成熟度指数を受け取り、各ギャップがマッピングされます：空白、重複、矛盾、古い文書。">Nuestros agentes rastrean tus manuales, carpetas y canales internos para identificar brechas y contradicciones. Recibes un Índice de Madurez Documental con cada gap mapeado: vacíos, duplicados, inconsistencias y documentos obsoletos.</p>
+                <ul class="feature-list">
+                    <li data-es="Rastreo automático de todos tus documentos" data-jp="全文書の自動追跡">Rastreo automático de todos tus documentos</li>
+                    <li data-es="Identificación de brechas y contradicciones" data-jp="ギャップと矛盾の特定">Identificación de brechas y contradicciones</li>
+                    <li data-es="Índice de Madurez Documental" data-jp="文書成熟度指数">Índice de Madurez Documental</li>
+                </ul>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M12 20h9"/>
-                        <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>
-                    </svg>
+        </div>
+
+        <!-- FEATURE 2: ARQUITECTURA -->
+        <div class="feature-block reverse">
+            <div class="feature-media">
+                <div class="screenshot-container">
+                    <div class="screenshot-placeholder">
+                        <img src="https://placehold.co/800x500/1a1812/2e2d29?text=Captura+de+Arquitectura" alt="Captura de pantalla del módulo de arquitectura" loading="lazy" />
+                    </div>
+                    <div class="screenshot-badge" data-es="Estructura inteligente" data-jp="インテリジェント構造">Estructura inteligente</div>
                 </div>
-                <h3 data-es="Redacción con Tono de Voz" data-jp="トーン＆ボイス執筆">Redacción con Tono de Voz</h3>
-                <p data-es="Los agentes generan borradores y nuestros consultores refinan todo. Tu despacho debe sonar como una marca profesional, no como un formulario del SAT." data-jp="エージェントがドラフトを生成し、コンサルタントが洗練。あなたの事務所は税務署の書式ではなく、プロフェッショナルブランドとして響きます。">Los agentes generan borradores y nuestros consultores refinan todo. Tu despacho debe sonar como una marca profesional, no como un formulario del SAT.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
-                        <path d="m9 12 2 2 4-4"/>
-                    </svg>
+            <div class="feature-text">
+                <span class="feature-tag" data-es="AGENTE DE ARQUITECTURA" data-jp="アーキテクチャエージェント">AGENTE DE ARQUITECTURA</span>
+                <h3 data-es="Arquitectura de Contenido Inteligente" data-jp="インテリジェントコンテンツアーキテクチャ">Arquitectura de Contenido Inteligente</h3>
+                <p data-es="Diseñamos la estructura jerárquica y narrativa de cada documento: capítulos, secciones, metadatos y enlaces cruzados que facilitan búsqueda, actualización y consumo por IA generativa." data-jp="各文書の階層的および物語的構造を設計します：章、セクション、メタデータ、生成AIによる検索、更新、消費を容易にする相互参照リンク。">Diseñamos la estructura jerárquica y narrativa de cada documento: capítulos, secciones, metadatos y enlaces cruzados que facilitan búsqueda, actualización y consumo por IA generativa.</p>
+                <ul class="feature-list">
+                    <li data-es="Estructura jerárquica optimizada" data-jp="最適化された階層構造">Estructura jerárquica optimizada</li>
+                    <li data-es="Metadatos y enlaces cruzados" data-jp="メタデータと相互参照">Metadatos y enlaces cruzados</li>
+                    <li data-es="Optimizado para consumo por IA" data-jp="AI消費用に最適化">Optimizado para consumo por IA</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FEATURE 3: REDACCIÓN -->
+        <div class="feature-block">
+            <div class="feature-media">
+                <div class="screenshot-container">
+                    <div class="screenshot-placeholder">
+                        <img src="https://placehold.co/800x500/1a1812/2e2d29?text=Captura+de+Redacción" alt="Captura de pantalla del módulo de redacción" loading="lazy" />
+                    </div>
+                    <div class="screenshot-badge" data-es="Tono de voz personalizado" data-jp="カスタマイズされたトーン">Tono de voz personalizado</div>
                 </div>
+            </div>
+            <div class="feature-text">
+                <span class="feature-tag" data-es="AGENTE DE REDACCIÓN" data-jp="執筆エージェント">AGENTE DE REDACCIÓN</span>
+                <h3 data-es="Redacción con Tono de Voz" data-jp="トーンオブボイスでの執筆">Redacción con Tono de Voz</h3>
+                <p data-es="Generamos borradores con lenguaje técnico preciso, adaptado a la voz de tu marca y al nivel de detalle que requieren auditores, autoridades o nuevos colaboradores." data-jp="監査人、当局、または新しい従業員が必要とする詳細レベルに適応した、ブランドの声に合わせた正確な技術言語でドラフトを生成します。">Generamos borradores con lenguaje técnico preciso, adaptado a la voz de tu marca y al nivel de detalle que requieren auditores, autoridades o nuevos colaboradores.</p>
+                <ul class="feature-list">
+                    <li data-es="Lenguaje técnico preciso" data-jp="正確な技術言語">Lenguaje técnico preciso</li>
+                    <li data-es="Adaptado a tu marca" data-jp="ブランドに適応">Adaptado a tu marca</li>
+                    <li data-es="Nivel de detalle configurable" data-jp="設定可能な詳細レベル">Nivel de detalle configurable</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FEATURE 4: VERIFICACIÓN -->
+        <div class="feature-block reverse">
+            <div class="feature-media">
+                <div class="screenshot-container">
+                    <div class="screenshot-placeholder">
+                        <img src="https://placehold.co/800x500/1a1812/2e2d29?text=Captura+de+Verificación" alt="Captura de pantalla del módulo de verificación" loading="lazy" />
+                    </div>
+                    <div class="screenshot-badge" data-es="Cumplimiento normativo" data-jp="規制遵守">Cumplimiento normativo</div>
+                </div>
+            </div>
+            <div class="feature-text">
+                <span class="feature-tag" data-es="AGENTE DE VERIFICACIÓN" data-jp="検証エージェント">AGENTE DE VERIFICACIÓN</span>
                 <h3 data-es="Verificación Normativa" data-jp="規制検証">Verificación Normativa</h3>
-                <p data-es="Cada procedimiento se verifica contra normativa vigente del SAT, IMSS, Infonavit y la legislación aplicable. Detectamos referencias obsoletas antes de que te cuesten una sanción." data-jp="各手順はSAT、IMSS、Infonavitおよび適用法令に照らして検証。制裁を受ける前に時代遅れの参照を検出。">Cada procedimiento se verifica contra normativa vigente del SAT, IMSS, Infonavit y la legislación aplicable. Detectamos referencias obsoletas antes de que te cuesten una sanción.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="m2 12 20"/>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                    </svg>
-                </div>
-                <h3 data-es="Optimización GEO" data-jp="GEO最適化">Optimización GEO</h3>
-                <p data-es="Tu documentación será legible y citable por ChatGPT, Perplexity y Google. Cuando busquen tu especialidad, tu despacho aparece como referente." data-jp="文書はChatGPT、Perplexity、Googleに読まれ引用されます。専門分野が検索されると、あなたの事務所が権威として表示。">Tu documentación será legible y citable por ChatGPT, Perplexity y Google. Cuando busquen tu especialidad, tu despacho aparece como referente.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M18 20V10"/>
-                        <path d="M12 20V4"/>
-                        <path d="M6 20v-6"/>
-                    </svg>
-                </div>
-                <h3 data-es="Monitoreo de Desviaciones" data-jp="逸脱監視">Monitoreo de Desviaciones</h3>
-                <p data-es="Nuestros agentes monitorean activamente la desviación operativa. Te avisamos cuando tus procesos reales empiezan a alejarse de lo documentado." data-jp="エージェントが業務逸脱を積極的に監視。実際のプロセスが文書から乖離し始めると、問題が拡大する前にお知らせ。">Nuestros agentes monitorean activamente la desviación operativa. Te avisamos cuando tus procesos reales empiezan a alejarse de lo documentado.</p>
+                <p data-es="Cada documento se valida contra disposiciones del SAT, IMSS, Infonavit, Ley Federal del Trabajo y normativa vigente; las actualizaciones legales disparan revisiones automáticas." data-jp="各文書はSAT、IMSS、Infonavit、連邦労働法、現行規制に対して検証されます。法的更新により自動レビューがトリガーされます。">Cada documento se valida contra disposiciones del SAT, IMSS, Infonavit, Ley Federal del Trabajo y normativa vigente; las actualizaciones legales disparan revisiones automáticas.</p>
+                <ul class="feature-list">
+                    <li data-es="Validación contra SAT, IMSS, Infonavit" data-jp="SAT、IMSS、Infonavitに対する検証">Validación contra SAT, IMSS, Infonavit</li>
+                    <li data-es="Revisiones automáticas por cambios legales" data-jp="法的変更による自動レビュー">Revisiones automáticas por cambios legales</li>
+                    <li data-es="Cumplimiento siempre actualizado" data-jp="常に最新のコンプライアンス">Cumplimiento siempre actualizado</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
-    <section id="servicios">
-        <p class="bracket-label" data-es="[ PLANES Y SERVICIOS ]" data-jp="[ プランとサービス ]">[ PLANES Y SERVICIOS ]</p>
-        <h2 class="services-title" data-es="REESTRUCTURAS Y MANTENIMIENTO CONTINUO" data-jp="再構築と継続的メンテナンス">
-            REESTRUCTURAS Y MANTENIMIENTO CONTINUO</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <span class="s-tag" data-es="PROYECTO ÚNICO" data-jp="単発プロジェクト">PROYECTO ÚNICO</span>
-                <h3 data-es="Reestructura completa de documentación" data-jp="文書の全面再構築">Reestructura completa de
-                    documentación</h3>
-                <p data-es="Arquitectura, redacción, verificación normativa, visuales y optimización. Entregamos en menos de 15 días hábiles. Incluye optimización GEO para que tu documentación sea legible y citable por motores de inteligencia artificial como ChatGPT y Perplexity."
-                    data-jp="アーキテクチャ、執筆、規制検証、ビジュアル、最適化。15営業日以内に納品。ChatGPTやPerplexityなどのAIエンジンに読まれ引用されるためのGEO最適化を含みます。">
-                    Arquitectura, redacción, verificación normativa, visuales y optimización. Entregamos en menos de 15
-                    días hábiles. Incluye optimización GEO para que tu documentación sea legible y citable por motores
-                    de inteligencia artificial como ChatGPT y Perplexity.</p>
-            </div>
-            <div class="service-card">
-                <span class="s-tag" data-es="RETAINER MENSUAL" data-jp="月次リテイナー">RETAINER MENSUAL</span>
-                <h3 data-es="Mantenimiento continuo y monitoreo de desviaciones" data-jp="継続的メンテナンスと逸脱監視">Mantenimiento
-                    continuo y monitoreo de desviaciones</h3>
-                <p data-es="Nos quedamos como tu equipo de documentación. Nuevas páginas, actualizaciones regulatorias, monitoreo activo de desviaciones operativas y alertas cuando tus procesos ya no coinciden con lo escrito. Tu despacho nunca queda desactualizado frente a clientes, auditores ni frente a la IA."
-                    data-jp="私たちはあなたの文書化チームとして継続します。新しいページ、規制の更新、業務逸脱の積極的な監視、そして実際のプロセスが文書と乖離した時点でのアラート。あなたの事務所はクライアント、監査人、AIに対して常に最新の状態を保ちます。">
-                    Nos quedamos como tu equipo de documentación. Nuevas páginas, actualizaciones regulatorias,
-                    monitoreo
-                    activo de desviaciones operativas y alertas cuando tus procesos ya no coinciden con lo escrito. Tu
-                    despacho nunca queda desactualizado frente a clientes, auditores ni frente a la IA.</p>
-            </div>
-            <div class="service-card">
-                <span class="s-tag" data-es="SIEMPRE INCLUIDO" data-jp="常時含まれるサービス">SIEMPRE INCLUIDO</span>
-                <h3 data-es="Un socio estratégico de posicionamiento" data-jp="戦略的ポジショニングパートナー">Un socio estratégico de
-                    posicionamiento</h3>
-                <p data-es="Pensamos contigo sobre posicionamiento del despacho, claridad de mensajes y tono de voz en documentos. Tu documentación debe sentirse como tu marca — no como un volcado de información. La documentación es marketing. La documentación es ventas."
-                    data-jp="事務所のポジショニング、メッセージの明確さ、文書のトーン＆ボイスについて共に考えます。文書化はあなたのブランドそのものでなければなりません――情報の羅列ではなく。文書化はマーケティング。文書化は営業です。">
-                    Pensamos contigo sobre posicionamiento del despacho, claridad de mensajes y tono de voz en
-                    documentos. Tu documentación debe sentirse como tu marca — no como un volcado de información. La
-                    documentación es marketing. La documentación es ventas.</p>
+    <!-- VIDEO DEMO SECTION -->
+    <section class="video-demo-section" id="como-funciona">
+        <div class="section-header centered">
+            <span class="section-tag" data-es="[ CÓMO FUNCIONA ]" data-jp="[ 仕組み ]">[ CÓMO FUNCIONA ]</span>
+            <h2 data-es="MIRA LA PLATAFORMA EN ACCIÓN" data-jp="プラットフォームの動作を見る">MIRA LA PLATAFORMA EN ACCIÓN</h2>
+        </div>
+        <div class="main-video-container">
+            <div class="video-wrapper">
+                <!-- MAIN VIDEO EMBED -->
+                <iframe 
+                    src="about:blank" 
+                    data-src="https://www.youtube.com/embed/YOUR_DEMO_VIDEO_ID?rel=0&modestbranding=1"
+                    title="Demo completa de SAKKA"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                <div class="video-overlay main-video-overlay">
+                    <button class="play-button large" aria-label="Reproducir video">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </button>
+                    <span class="video-label" data-es="Demo completa · 3 minutos" data-jp="完全デモ・3分">Demo completa · 3 minutos</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- PRICING SECTION -->
-    <section id="pricing" class="pricing-section">
-        <p class="bracket-label" data-es="[ PRECIOS TRANSPARENTES ]" data-jp="[ 透明な価格設定 ]">[ PRECIOS TRANSPARENTES ]</p>
-        <h2 class="pricing-title" data-es="ELIGE EL PLAN QUE SE ADAPTE A TU DESPACHO" data-jp="あなたの事務所に合ったプランを選択">
-            ELIGE EL PLAN QUE SE ADAPTE A TU DESPACHO</h2>
+    <!-- MÉTRICAS -->
+    <section class="metrics-section">
+        <div class="metrics-grid">
+            <div class="metric">
+                <span class="metric-value">15</span>
+                <span class="metric-label" data-es="DÍAS DE ENTREGA" data-jp="納品日数">DÍAS DE ENTREGA</span>
+            </div>
+            <div class="metric">
+                <span class="metric-value">80%</span>
+                <span class="metric-label" data-es="REDUCCIÓN DE TIEMPO" data-jp="時間削減">REDUCCIÓN DE TIEMPO</span>
+            </div>
+            <div class="metric">
+                <span class="metric-value">0</span>
+                <span class="metric-label" data-es="ERRORES NORMATIVOS" data-jp="規制エラー">ERRORES NORMATIVOS</span>
+            </div>
+            <div class="metric">
+                <span class="metric-value">24/7</span>
+                <span class="metric-label" data-es="MONITOREO ACTIVO" data-jp="アクティブモニタリング">MONITOREO ACTIVO</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="process-section">
+        <div class="section-header">
+            <span class="section-tag" data-es="[ PROCESO ]" data-jp="[ プロセス ]">[ PROCESO ]</span>
+            <h2 data-es="DE CAOS DOCUMENTAL A SISTEMA OPERATIVO EN 15 DÍAS" data-jp="文書の混乱から15日でオペレーティングシステムへ">DE CAOS DOCUMENTAL A SISTEMA OPERATIVO EN 15 DÍAS</h2>
+        </div>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-header">
+                    <span class="step-num">01</span>
+                    <span class="step-time" data-es="Día 1-2" data-jp="1-2日目">Día 1-2</span>
+                </div>
+                <h3 data-es="Kick-off + Acceso" data-jp="キックオフ + アクセス">Kick-off + Acceso</h3>
+                <p data-es="Llamada de alineación de 45 min. Nos das acceso a carpetas, Drive, Notion o donde viva tu documentación actual." data-jp="45分のアラインメントコール。現在の文書が存在するフォルダ、Drive、Notionへのアクセスを提供していただきます。">Llamada de alineación de 45 min. Nos das acceso a carpetas, Drive, Notion o donde viva tu documentación actual.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-header">
+                    <span class="step-num">02</span>
+                    <span class="step-time" data-es="Día 3-5" data-jp="3-5日目">Día 3-5</span>
+                </div>
+                <h3 data-es="Auditoría + Arquitectura" data-jp="監査 + アーキテクチャ">Auditoría + Arquitectura</h3>
+                <p data-es="Los agentes escanean, clasifican y entregan el Índice de Madurez Documental y la propuesta de arquitectura." data-jp="エージェントがスキャン、分類し、文書成熟度指数とアーキテクチャ提案を納品します。">Los agentes escanean, clasifican y entregan el Índice de Madurez Documental y la propuesta de arquitectura.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-header">
+                    <span class="step-num">03</span>
+                    <span class="step-time" data-es="Día 6-12" data-jp="6-12日目">Día 6-12</span>
+                </div>
+                <h3 data-es="Redacción + Verificación" data-jp="執筆 + 検証">Redacción + Verificación</h3>
+                <p data-es="Generación de borradores, validación normativa y ajustes de tono de voz con revisiones iterativas." data-jp="ドラフト生成、規制検証、反復レビューによるトーン調整。">Generación de borradores, validación normativa y ajustes de tono de voz con revisiones iterativas.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-header">
+                    <span class="step-num">04</span>
+                    <span class="step-time" data-es="Día 13-15" data-jp="13-15日目">Día 13-15</span>
+                </div>
+                <h3 data-es="Entrega + Onboarding" data-jp="納品 + オンボーディング">Entrega + Onboarding</h3>
+                <p data-es="Documentación final publicada en tu plataforma de documentación. Capacitación del equipo y setup de monitoreo continuo." data-jp="最終文書を文書化プラットフォームに公開。チームトレーニングと継続的モニタリングのセットアップ。">Documentación final publicada en tu plataforma de documentación. Capacitación del equipo y setup de monitoreo continuo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRECIOS -->
+    <section id="precios" class="pricing-section">
+        <div class="section-header centered">
+            <span class="section-tag" data-es="[ PRECIOS ]" data-jp="[ 価格 ]">[ PRECIOS ]</span>
+            <h2 data-es="PLANES DISEÑADOS PARA DESPACHOS QUE ESCALAN" data-jp="スケールする事務所向けに設計されたプラン">PLANES DISEÑADOS PARA DESPACHOS QUE ESCALAN</h2>
+        </div>
         <div class="pricing-grid">
             <div class="pricing-card">
                 <div class="pricing-header">
-                    <span class="pricing-tag" data-es="STARTER" data-jp="スターター">STARTER</span>
+                    <span class="pricing-name" data-es="STARTER" data-jp="スターター">STARTER</span>
                     <div class="pricing-price">
-                        <span class="pricing-currency">$</span>
-                        <span class="pricing-amount">2,500</span>
-                        <span class="pricing-period" data-es="USD / mes" data-jp="USD / 月">USD / mes</span>
+                        <span class="currency">$</span>
+                        <span class="amount">2,500</span>
+                        <span class="period" data-es="MXN / mes" data-jp="MXN/月">MXN / mes</span>
                     </div>
-                    <p class="pricing-desc" data-es="Ideal para despachos pequeños que inician su transformación" data-jp="変革を始める小規模事務所に最適">Ideal para despachos pequeños que inician su transformación</p>
+                    <p class="pricing-desc" data-es="Para despachos que inician su transformación documental" data-jp="文書変革を開始する事務所向け">Para despachos que inician su transformación documental</p>
                 </div>
                 <ul class="pricing-features">
                     <li data-es="Hasta 50 documentos" data-jp="最大50文書">Hasta 50 documentos</li>
-                    <li data-es="1 agente de auditoría" data-jp="監査エージェント1台">1 agente de auditoría</li>
-                    <li data-es="Verificación normativa básica" data-jp="基本的な規制検証">Verificación normativa básica</li>
+                    <li data-es="1 auditoría mensual" data-jp="月1回の監査">1 auditoría mensual</li>
                     <li data-es="Soporte por email" data-jp="メールサポート">Soporte por email</li>
-                    <li data-es="Reportes mensuales" data-jp="月次レポート">Reportes mensuales</li>
+                    <li data-es="Actualizaciones trimestrales" data-jp="四半期更新">Actualizaciones trimestrales</li>
                 </ul>
-                <a href="https://cal.com/joseph-hendershot/reunion-de-15-min" class="btn-pricing" data-es="COMENZAR AHORA" data-jp="今すぐ開始">COMENZAR AHORA</a>
+                <a href="https://cal.com/joseph-hendershot/reunion-de-15-min" class="btn-pricing" data-es="COMENZAR" data-jp="始める">COMENZAR</a>
             </div>
-            
             <div class="pricing-card featured">
-                <div class="pricing-badge" data-es="MÁS POPULAR" data-jp="人気プラン">MÁS POPULAR</div>
+                <div class="pricing-badge" data-es="MÁS POPULAR" data-jp="最も人気">MÁS POPULAR</div>
                 <div class="pricing-header">
-                    <span class="pricing-tag" data-es="PROFESIONAL" data-jp="プロフェッショナル">PROFESIONAL</span>
+                    <span class="pricing-name" data-es="PROFESIONAL" data-jp="プロフェッショナル">PROFESIONAL</span>
                     <div class="pricing-price">
-                        <span class="pricing-currency">$</span>
-                        <span class="pricing-amount">5,500</span>
-                        <span class="pricing-period" data-es="USD / mes" data-jp="USD / 月">USD / mes</span>
+                        <span class="currency">$</span>
+                        <span class="amount">5,500</span>
+                        <span class="period" data-es="MXN / mes" data-jp="MXN/月">MXN / mes</span>
                     </div>
-                    <p class="pricing-desc" data-es="Para despachos medianos con necesidades avanzadas" data-jp="高度なニーズを持つ中規模事務所向け">Para despachos medianos con necesidades avanzadas</p>
-                </div>
-                <ul class="pricing-features">
-                    <li data-es="Hasta 200 documentos" data-jp="最大200文書">Hasta 200 documentos</li>
-                    <li data-es="3 agentes de auditoría" data-jp="監査エージェント3台">3 agentes de auditoría</li>
-                    <li data-es="Verificación normativa completa" data-jp="完全な規制検証">Verificación normativa completa</li>
-                    <li data-es="Optimización GEO incluida" data-jp="GEO最適化込み">Optimización GEO incluida</li>
-                    <li data-es="Monitoreo de desviaciones" data-jp="逸脱監視">Monitoreo de desviaciones</li>
-                    <li data-es="Soporte prioritario 24/7" data-jp="24時間優先サポート">Soporte prioritario 24/7</li>
-                    <li data-es="Consultor estratégico asignado" data-jp="専任戦略コンサルタント">Consultor estratégico asignado</li>
-                </ul>
-                <a href="https://cal.com/joseph-hendershot/reunion-de-15-min" class="btn-pricing-featured" data-es="COMENZAR AHORA" data-jp="今すぐ開始">COMENZAR AHORA</a>
-            </div>
-            
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <span class="pricing-tag" data-es="ENTERPRISE" data-jp="エンタープライズ">ENTERPRISE</span>
-                    <div class="pricing-price">
-                        <span class="pricing-custom" data-es="PERSONALIZADO" data-jp="カスタム">PERSONALIZADO</span>
-                    </div>
-                    <p class="pricing-desc" data-es="Soluciones a medida para grandes firmas y corporativos" data-jp="大手事務所・企業向けカスタムソリューション">Soluciones a medida para grandes firmas y corporativos</p>
+                    <p class="pricing-desc" data-es="Para despachos en crecimiento que buscan excelencia operativa" data-jp="運営の卓越性を求める成長中の事務所向け">Para despachos en crecimiento que buscan excelencia operativa</p>
                 </div>
                 <ul class="pricing-features">
                     <li data-es="Documentos ilimitados" data-jp="無制限の文書">Documentos ilimitados</li>
-                    <li data-es="Agentes ilimitados" data-jp="無制限のエージェント">Agentes ilimitados</li>
-                    <li data-es="API personalizada" data-jp="カスタムAPI">API personalizada</li>
-                    <li data-es="Integraciones a medida" data-jp="カスタム統合">Integraciones a medida</li>
-                    <li data-es="SLA garantizado" data-jp="SLA保証">SLA garantizado</li>
-                    <li data-es="Equipo dedicado" data-jp="専任チーム">Equipo dedicado</li>
-                    <li data-es="Onboarding personalizado" data-jp="カスタムオンボーディング">Onboarding personalizado</li>
+                    <li data-es="Monitoreo 24/7" data-jp="24時間モニタリング">Monitoreo 24/7</li>
+                    <li data-es="Verificación normativa" data-jp="規制検証">Verificación normativa</li>
+                    <li data-es="Soporte prioritario" data-jp="優先サポート">Soporte prioritario</li>
+                    <li data-es="Optimización GEO" data-jp="GEO最適化">Optimización GEO</li>
                 </ul>
-                <a href="https://cal.com/joseph-hendershot/reunion-de-15-min" class="btn-pricing" data-es="CONTACTAR VENTAS" data-jp="営業に連絡">CONTACTAR VENTAS</a>
+                <a href="https://cal.com/joseph-hendershot/reunion-de-15-min" class="btn-pricing-featured" data-es="COMENZAR" data-jp="始める">COMENZAR</a>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <span class="pricing-name" data-es="ENTERPRISE" data-jp="エンタープライズ">ENTERPRISE</span>
+                    <div class="pricing-price">
+                        <span class="amount custom" data-es="PERSONALIZADO" data-jp="カスタム">PERSONALIZADO</span>
+                    </div>
+                    <p class="pricing-desc" data-es="Para firmas con necesidades específicas de escala y cumplimiento" data-jp="スケールとコンプライアンスの特定ニーズを持つ企業向け">Para firmas con necesidades específicas de escala y cumplimiento</p>
+                </div>
+                <ul class="pricing-features">
+                    <li data-es="Todo en Profesional" data-jp="プロフェッショナルのすべて">Todo en Profesional</li>
+                    <li data-es="Consultor dedicado" data-jp="専任コンサルタント">Consultor dedicado</li>
+                    <li data-es="Integraciones personalizadas" data-jp="カスタム統合">Integraciones personalizadas</li>
+                    <li data-es="SLA garantizado" data-jp="保証されたSLA">SLA garantizado</li>
+                    <li data-es="Capacitación on-site" data-jp="オンサイトトレーニング">Capacitación on-site</li>
+                </ul>
+                <a href="https://cal.com/joseph-hendershot/reunion-de-15-min" class="btn-pricing" data-es="CONTACTAR" data-jp="お問い合わせ">CONTACTAR</a>
             </div>
         </div>
     </section>
 
-    <!-- METRICS SECTION -->
-    <section class="metrics-section">
-        <div class="metrics-grid">
-            <div class="metric-item">
-                <span class="metric-value">15</span>
-                <span class="metric-label" data-es="DÍAS HÁBILES DE ENTREGA" data-jp="営業日で納品">DÍAS HÁBILES DE ENTREGA</span>
-            </div>
-            <div class="metric-item">
-                <span class="metric-value">80%</span>
-                <span class="metric-label" data-es="REDUCCIÓN EN TIEMPO DE ONBOARDING" data-jp="オンボーディング時間削減">REDUCCIÓN EN TIEMPO DE ONBOARDING</span>
-            </div>
-            <div class="metric-item">
-                <span class="metric-value">0</span>
-                <span class="metric-label" data-es="ERRORES EN PROCESOS DOCUMENTADOS" data-jp="文書化プロセスのエラー">ERRORES EN PROCESOS DOCUMENTADOS</span>
-            </div>
-            <div class="metric-item">
-                <span class="metric-value">24/7</span>
-                <span class="metric-label" data-es="MONITOREO DE AGENTES" data-jp="エージェント監視">MONITOREO DE AGENTES</span>
-            </div>
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="section-header centered">
+            <span class="section-tag" data-es="[ PREGUNTAS FRECUENTES ]" data-jp="[ よくある質問 ]">[ PREGUNTAS FRECUENTES ]</span>
+            <h2 data-es="RESUELVE TUS DUDAS" data-jp="疑問を解決する">RESUELVE TUS DUDAS</h2>
         </div>
-    </section>
-
-    <div class="statement-section">
-        <h2 class="statement-quote"
-            data-es="LA BUENA DOCUMENTACIÓN CIERRA CONTRATOS. LA MALA DOCUMENTACIÓN ABRE TICKETS DE SOPORTE."
-            data-jp="優れた文書化は契約を成立させる。劣った文書化はサポートチケットを生む。">LA BUENA DOCUMENTACIÓN CIERRA CONTRATOS.<br><em>LA MALA
-                DOCUMENTACIÓN ABRE TICKETS
-                DE SOPORTE.</em></h2>
-        <p class="statement-attr" data-es="NUESTRA FILOSOFÍA" data-jp="私たちの哲学">NUESTRA FILOSOFÍA</p>
-    </div>
-
-    <section id="proceso">
-        <p class="bracket-label" data-es="[ EL PROCESO ]" data-jp="[ プロセス ]">[ EL PROCESO ]</p>
-        <div class="process-header">
-            <h2 class="process-title" data-es="ESTRUCTURAMOS, ESCRIBIMOS Y MANTENEMOS. CADA PASO ES CLARO."
-                data-jp="構造化し、書き、維持する。各ステップは明確。">ESTRUCTURAMOS, ESCRIBIMOS Y MANTENEMOS.<br><em>CADA PASO ES CLARO.</em>
-            </h2>
-            <span class="process-timeline" data-es="SIN AMBIGÜEDAD EN EL TRABAJO" data-jp="曖昧さのない作業">SIN
-                AMBIGÜEDAD<br>EN EL TRABAJO</span>
-        </div>
-        <div class="process-table">
-            <div class="process-row">
-                <div class="pr-num">01</div>
-                <div class="pr-content">
-                    <h3 data-es="Auditoría con agentes de IA" data-jp="AIエージェントによる監査">Auditoría con agentes de IA</h3>
-                    <p data-es="Nuestros agentes rastrean tus manuales, carpetas, correos con instrucciones y canales internos para identificar cada brecha, contradicción y proceso sin dueño — a una escala y velocidad que ningún equipo humano puede igualar. Recibes un diagnóstico completo antes de que escribamos una sola línea."
-                        data-jp="私たちのエージェントはマニュアル、フォルダ、指示メール、社内チャンネルを精査し、すべてのギャップ、矛盾、責任者不在のプロセスを特定します——人間チームが及ばない規模と速さで。一行書く前に完全な診断をお届けします。">
-                        Nuestros agentes rastrean tus manuales, carpetas, correos con instrucciones y canales internos
-                        para identificar cada brecha, contradicción y proceso sin dueño — a una escala y velocidad que
-                        ningún equipo humano puede igualar. Recibes un diagnóstico completo antes de que escribamos una
-                        sola línea.</p>
-                </div>
-                <div class="pr-day">DÍA 1–2</div>
-            </div>
-            <div class="process-row">
-                <div class="pr-num">02</div>
-                <div class="pr-content">
-                    <h3 data-es="Arquitectura de la información" data-jp="情報アーキテクチャ">Arquitectura de la información</h3>
-                    <p data-es="El índice de procesos es lo primero que ve tu equipo, así que nos obsesionamos con él. Diseñamos la estructura que lleva a un colaborador nuevo de cero a productivo. Aquí sucede la mayor parte del pensamiento — ningún agente puede hacerlo. Esto requiere juicio, contexto del despacho y entender cómo tus clientes perciben el servicio."
-                        data-jp="プロセスインデックスはチームが最初に目にするものなので、私たちはそこに執着します。新入社員をゼロから即戦力へと導く構造を設計します。ここで思考の大部分が行われます——AIエージェントには不可能なことです。これには判断力、事務所のコンテキスト、クライアントがサービスをどう認識するかの理解が必要です。">
-                        El índice de procesos es lo primero que ve tu equipo, así que nos obsesionamos con él. Diseñamos
-                        la estructura que lleva a un colaborador nuevo de cero a productivo. Aquí sucede la mayor parte
-                        del pensamiento — ningún agente puede hacerlo. Esto requiere juicio, contexto del despacho y
-                        entender cómo tus clientes perciben el servicio.</p>
-                </div>
-                <div class="pr-day">DÍA 2–3</div>
-            </div>
-            <div class="process-row">
-                <div class="pr-num">03</div>
-                <div class="pr-content">
-                    <h3 data-es="Redacción y tono de voz" data-jp="執筆とトーン＆ボイス">Redacción y tono de voz</h3>
-                    <p data-es="Manuales, procedimientos, protocolos y políticas. Los agentes generan borradores desde tus materiales y nuestros consultores refinan todo, eliminan el relleno y aseguran que el modelo mental sea correcto. También definimos el tono de voz de tu documentación: tu despacho debe sonar como una marca profesional, no como un formulario del SAT."
-                        data-jp="マニュアル、手順書、プロトコル、ポリシー。エージェントがあなたの資料からドラフトを生成し、コンサルタントがすべてを洗練させ、冗長な記述を排除し、正確なメンタルモデルを確保します。また文書のトーン＆ボイスを定義します：あなたの事務所は税務署の書式のようではなく、プロフェッショナルなブランドのように聞こえなければなりません。">
-                        Manuales, procedimientos, protocolos y políticas. Los agentes generan borradores desde tus
-                        materiales y nuestros consultores refinan todo, eliminan el relleno y aseguran que el modelo
-                        mental sea correcto. También definimos el tono de voz de tu documentación: tu despacho debe
-                        sonar como una marca profesional, no como un formulario del SAT.</p>
-                </div>
-                <div class="pr-day">DÍA 3–10</div>
-            </div>
-            <div class="process-row">
-                <div class="pr-num">04</div>
-                <div class="pr-content">
-                    <h3 data-es="Verificación normativa y optimización GEO" data-jp="規制検証とGEO最適化">Verificación normativa
-                        y optimización GEO</h3>
-                    <p data-es="Cada procedimiento se verifica contra normativa vigente del SAT, IMSS, Infonavit y la legislación aplicable. Nuestros agentes detectan referencias obsoletas antes de que te cuesten una sanción. Además, optimizamos la estructura semántica de cada documento para que sea legible y citable por motores de búsqueda generativos: cuando alguien le pregunte a ChatGPT o Perplexity sobre tu especialidad, tu despacho aparece como referente."
-                        data-jp="各手順はSAT、IMSS、Infonavit、および適用法令の現行規制に照らして検証されます。エージェントは制裁を受ける前に時代遅れの参照を検出します。さらに、各文書の意味的構造を最適化し、生成型検索エンジンに読まれ引用されるようにします：ChatGPTやPerplexityであなたの専門分野が検索されたとき、あなたの事務所が権威として表示されます。">
-                        Cada procedimiento se verifica contra normativa vigente del SAT, IMSS, Infonavit y la
-                        legislación
-                        aplicable. Nuestros agentes detectan referencias obsoletas antes de que te cuesten una sanción.
-                        Además, optimizamos la estructura semántica de cada documento para que sea legible y citable
-                        por motores de búsqueda generativos: cuando alguien le pregunte a ChatGPT o Perplexity sobre
-                        tu especialidad, tu despacho aparece como referente.</p>
-                </div>
-                <div class="pr-day">DÍA 8–12</div>
-            </div>
-            <div class="process-row">
-                <div class="pr-num">05</div>
-                <div class="pr-content">
-                    <h3 data-es="Visuales + implementación" data-jp="ビジュアル＋実装">Visuales + implementación</h3>
-                    <p data-es="Diagramas de flujo, capturas anotadas y walkthroughs para procesos complejos. Entregamos en la plataforma que tu equipo ya usa: Notion, Google Drive, Word o portal propio."
-                        data-jp="フローチャート、注釈付きスクリーンショット、複雑なプロセスのウォークスルー。チームがすでに使用しているプラットフォームで納品：Notion、Google Drive、Word、または専用ポータル。">
-                        Diagramas de flujo, capturas anotadas y walkthroughs para procesos complejos. Entregamos en la
-                        plataforma que tu equipo ya usa: Notion, Google Drive, Word o portal propio.</p>
-                </div>
-                <div class="pr-day">DÍA 10–14</div>
-            </div>
-            <div class="process-row">
-                <div class="pr-num">06</div>
-                <div class="pr-content">
-                    <h3 data-es="Lanzamiento y monitoreo continuo" data-jp="ローンチと継続監視">Lanzamiento y monitoreo continuo
-                    </h3>
-                    <p data-es="Validación final, capacitación al equipo responsable y entrega en vivo. Para clientes en retainer, nuestros agentes monitorean activamente la desviación operativa: cuando tus procesos reales empiezan a alejarse de lo documentado, te avisamos antes de que el problema escale."
-                        data-jp="最終検証、担当チームへの研修、ライブ納品。リテイナークライアントに対しては、エージェントが業務逸脱を積極的に監視：実際のプロセスが文書から乖離し始めると、問題が拡大する前にお知らせします。">
-                        Validación final, capacitación al equipo responsable y entrega en vivo. Para clientes en
-                        retainer,
-                        nuestros agentes monitorean activamente la desviación operativa: cuando tus procesos reales
-                        empiezan a alejarse de lo documentado, te avisamos antes de que el problema escale.</p>
-                </div>
-                <div class="pr-day">DÍA 15</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="filosofia">
-        <p class="bracket-label" data-es="[ NUESTRA FILOSOFÍA ]" data-jp="[ 私たちの哲学 ]">[ NUESTRA FILOSOFÍA ]</p>
-        <h2 class="why-title" data-es="TU OPERACIÓN MERECE A ALGUIEN QUE REALMENTE LE IMPORTE"
-            data-jp="あなたの業務は、本当に気にかける人を必要としている">TU OPERACIÓN MERECE A ALGUIEN QUE REALMENTE LE IMPORTE</h2>
-        <div class="why-grid">
-            <div class="why-item">
-                <h3 data-es="Auditar cientos de páginas, verificar cada procedimiento, detectar referencias obsoletas al SAT o al IMSS. Estos son problemas para agentes."
-                    data-jp="数百ページの監査、各手順の検証、SATやIMSSへの時代遅れの参照の検出。これらはエージェントが解決すべき問題です。">Auditar cientos de páginas,
-                    verificar cada procedimiento, detectar referencias obsoletas al SAT o
-                    al IMSS. Estos son problemas para agentes.</h3>
-                <p data-es="Construimos los nuestros específicamente para documentación operativa de despachos mexicanos. Trabajan a una escala y velocidad que ningún equipo humano puede igualar — y nunca se cansan de revisar la misma norma fiscal por decimocuarta vez."
-                    data-jp="私たちは専門事務所の業務文書化のために特化したエージェントを構築しました。人間チームが及ばない規模と速さで稼働し、同じ税規則を14回目でも倦まず検証し続けます。">
-                    Construimos los nuestros específicamente para documentación operativa de despachos mexicanos.
-                    Trabajan a una escala y velocidad que ningún equipo humano puede igualar — y nunca se cansan de
-                    revisar la misma norma fiscal por decimocuarta vez.</p>
-            </div>
-            <div class="why-item">
-                <h3 data-es="Arquitectura de la información, claridad de procesos, decidir cómo debe operar tu despacho y qué tono de voz debe tener. Eso requiere pensamiento crítico."
-                    data-jp="情報アーキテクチャ、プロセスの明確化、事務所の運営方針の決定、トーン＆ボイスの設計。これには批判的思考が必要です。">Arquitectura de la información,
-                    claridad de procesos, decidir cómo debe operar tu despacho y
-                    qué tono de voz debe tener. Eso requiere pensamiento crítico.</h3>
-                <p data-es="Ningún agente puede hacerlo. Hay decisiones que dependen del contexto del despacho, la cultura del equipo y la forma en que tus clientes entienden el servicio. El criterio humano no es opcional — es el núcleo de lo que hacemos."
-                    data-jp="AIエージェントには不可能なことです。意思決定には事務所のコンテキスト、チームの文化、クライアントのサービス理解が伴います。人間の判断は選択肢ではなく——私たちの核心です。">
-                    Ningún agente puede hacerlo. Hay decisiones que dependen del contexto del despacho, la cultura del
-                    equipo y la forma en que tus clientes entienden el servicio. El criterio humano no es opcional —
-                    es el núcleo de lo que hacemos.</p>
-            </div>
-            <div class="why-item">
-                <h3 data-es="El índice de procesos es lo primero que ven tus colaboradores. Les dice cuánto cuidado pusiste en la operación."
-                    data-jp="プロセスインデックスはスタッフが最初に目にするものです。業務にどれだけ心を砕いたかを示します。">El índice de procesos es lo primero que
-                    ven tus colaboradores. Les dice cuánto cuidado pusiste en
-                    la operación.</h3>
-                <p data-es="Nos obsesionamos con la estructura porque eso solo elimina la mayor parte de la confusión operativa. Un índice bien diseñado es la diferencia entre un equipo autónomo y uno dependiente del socio — entre crecer y estar atascado contestando las mismas preguntas."
-                    data-jp="構造にこだわるのは、それだけで業務上の混乱の大部分を解消するからです。適切に設計されたインデックスは、自律的なチームとパートナー依存のチームの差——成長と停滞の差です。">Nos
-                    obsesionamos con la estructura porque eso solo elimina la mayor parte de la confusión operativa.
-                    Un índice bien diseñado es la diferencia entre un equipo autónomo y uno dependiente del socio —
-                    entre crecer y estar atascado contestando las mismas preguntas.</p>
-            </div>
-            <div class="why-item">
-                <h3 data-es="Tu documentación bien estructurada es el contenido que ChatGPT y Perplexity citan cuando alguien busca servicios como los tuyos."
-                    data-jp="適切に構造化された文書は、ChatGPTやPerplexityがあなたのサービスを検索する際に引用するコンテンツです。">Tu documentación bien
-                    estructurada es el contenido que ChatGPT y Perplexity citan cuando alguien
-                    busca servicios como los tuyos.</h3>
-                <p data-es="La documentación interna y la visibilidad en IA no son dos cosas separadas. Un manual semánticamente estructurado, con autoría clara y actualizaciones recientes, se convierte en la fuente de autoridad que los modelos de lenguaje prefieren citar. Tus competidores aún no lo saben."
-                    data-jp="社内文書とAIでの可視性は別物ではありません。意味的に構造化され、明確な著者情報と最近の更新を持つマニュアルは、言語モデルが引用を好む権威ある情報源になります。競合他社はまだこれを知りません。">
-                    La documentación interna y la visibilidad en IA no son dos cosas separadas. Un manual semánticamente
-                    estructurado, con autoría clara y actualizaciones recientes, se convierte en la fuente de autoridad
-                    que los modelos de lenguaje prefieren citar. Tus competidores aún no lo saben.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section id="faq" class="faq-section">
-        <p class="bracket-label" data-es="[ PREGUNTAS FRECUENTES ]" data-jp="[ よくある質問 ]">[ PREGUNTAS FRECUENTES ]</p>
-        <h2 class="faq-title" data-es="RESOLVEMOS TUS DUDAS" data-jp="ご質問にお答えします">RESOLVEMOS TUS DUDAS</h2>
-        <div class="faq-grid">
+        <div class="faq-list">
             <div class="faq-item">
-                <h3 data-es="¿Cuánto tiempo toma implementar la plataforma?" data-jp="プラットフォームの実装にどのくらいかかりますか？">¿Cuánto tiempo toma implementar la plataforma?</h3>
-                <p data-es="La configuración inicial toma menos de 5 minutos. La reestructura completa de documentación se entrega en menos de 15 días hábiles." data-jp="初期設定は5分未満。文書の完全な再構築は15営業日以内に納品されます。">La configuración inicial toma menos de 5 minutos. La reestructura completa de documentación se entrega en menos de 15 días hábiles.</p>
+                <button class="faq-question">
+                    <span data-es="¿Cómo funciona la prueba gratuita?" data-jp="無料トライアルはどのように機能しますか？">¿Cómo funciona la prueba gratuita?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p data-es="Agendas una llamada de 15 minutos donde evaluamos tu situación documental actual. Sin compromiso, sin tarjeta de crédito. Si hay fit, iniciamos con el diagnóstico." data-jp="15分のコールを予約し、現在の文書状況を評価します。義務なし、クレジットカード不要。フィットがあれば、診断を開始します。">Agendas una llamada de 15 minutos donde evaluamos tu situación documental actual. Sin compromiso, sin tarjeta de crédito. Si hay fit, iniciamos con el diagnóstico.</p>
+                </div>
             </div>
             <div class="faq-item">
-                <h3 data-es="¿Necesito conocimientos técnicos?" data-jp="技術的な知識は必要ですか？">¿Necesito conocimientos técnicos?</h3>
-                <p data-es="No. La plataforma está diseñada para que cualquier persona pueda usarla sin experiencia técnica previa." data-jp="いいえ。プラットフォームは技術的な経験がなくても誰でも使用できるように設計されています。">No. La plataforma está diseñada para que cualquier persona pueda usarla sin experiencia técnica previa.</p>
+                <button class="faq-question">
+                    <span data-es="¿Qué tipo de documentos pueden procesar?" data-jp="どのような種類の文書を処理できますか？">¿Qué tipo de documentos pueden procesar?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p data-es="Manuales de procedimientos, políticas internas, guías de onboarding, documentación técnica, contratos template, y cualquier documento operativo que necesite estructura y mantenimiento." data-jp="手続きマニュアル、内部ポリシー、オンボーディングガイド、技術文書、テンプレート契約、および構造とメンテナンスが必要なあらゆる業務文書。">Manuales de procedimientos, políticas internas, guías de onboarding, documentación técnica, contratos template, y cualquier documento operativo que necesite estructura y mantenimiento.</p>
+                </div>
             </div>
             <div class="faq-item">
-                <h3 data-es="¿Mis datos están seguros?" data-jp="データは安全ですか？">¿Mis datos están seguros?</h3>
-                <p data-es="Sí. Utilizamos cifrado de extremo a extremo y cumplimos con los más altos estándares de seguridad de la industria." data-jp="はい。エンドツーエンドの暗号化を使用し、業界最高水準のセキュリティ基準に準拠しています。">Sí. Utilizamos cifrado de extremo a extremo y cumplimos con los más altos estándares de seguridad de la industria.</p>
+                <button class="faq-question">
+                    <span data-es="¿Qué pasa si no me gusta el resultado?" data-jp="結果が気に入らない場合はどうなりますか？">¿Qué pasa si no me gusta el resultado?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p data-es="Ofrecemos revisiones ilimitadas durante el proceso de entrega. Si después de las revisiones no estás satisfecho, reembolsamos el 100% de tu inversión." data-jp="納品プロセス中は無制限のリビジョンを提供します。リビジョン後も満足いただけない場合は、投資額の100%を返金します。">Ofrecemos revisiones ilimitadas durante el proceso de entrega. Si después de las revisiones no estás satisfecho, reembolsamos el 100% de tu inversión.</p>
+                </div>
             </div>
             <div class="faq-item">
-                <h3 data-es="¿Puedo cancelar en cualquier momento?" data-jp="いつでもキャンセルできますか？">¿Puedo cancelar en cualquier momento?</h3>
-                <p data-es="Sí. No hay contratos a largo plazo. Puedes cancelar tu suscripción cuando quieras sin penalizaciones." data-jp="はい。長期契約はありません。ペナルティなしでいつでもサブスクリプションをキャンセルできます。">Sí. No hay contratos a largo plazo. Puedes cancelar tu suscripción cuando quieras sin penalizaciones.</p>
+                <button class="faq-question">
+                    <span data-es="¿Los agentes de IA reemplazan a consultores humanos?" data-jp="AIエージェントは人間のコンサルタントに取って代わりますか？">¿Los agentes de IA reemplazan a consultores humanos?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p data-es="No. Los agentes automatizan tareas repetitivas y de escala (auditoría, clasificación, generación de borradores), pero cada entregable pasa por revisión humana experta. Somos IA + criterio humano." data-jp="いいえ。エージェントは反復的でスケールのあるタスク（監査、分類、ドラフト生成）を自動化しますが、各成果物は人間の専門家によるレビューを経ます。私たちはAI + 人間の判断です。">No. Los agentes automatizan tareas repetitivas y de escala (auditoría, clasificación, generación de borradores), pero cada entregable pasa por revisión humana experta. Somos IA + criterio humano.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="cta-section" id="contacto">
-        <h2 class="cta-title" data-es="TU DOCUMENTACIÓN OPERATIVA, FINALMENTE EN ORDEN." data-jp="あなたの業務文書、ついに整理されます。">
-            TU DOCUMENTACIÓN OPERATIVA,<br><em>FINALMENTE EN ORDEN.</em></h2>
-        <p class="cta-sub"
-            data-es="Agenda una llamada de 30 minutos. Evaluamos tu situación actual, te decimos exactamente qué necesitas — y qué no. Sin compromisos, sin propuestas genéricas."
-            data-jp="30分の無料相談をご予約ください。現状を評価し、必要なものと不要なものを正確にお伝えします。約束なし、一般的な提案なし。">Agenda una llamada de 30 minutos.
-            Evaluamos tu situación actual, te decimos exactamente qué
-            necesitas — y qué no. Sin compromisos, sin propuestas genéricas.</p>
-        <div class="hero-actions">
-            <a href="https://cal.com/joseph-hendershot/reunion-de-15-min" class="btn-cta" data-es="COMENZAR PRUEBA GRATIS"
-                data-jp="無料体験を開始">COMENZAR PRUEBA GRATIS</a>
+    <!-- CTA FINAL -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 data-es="TRANSFORMA LA DOCUMENTACIÓN DE TU DESPACHO HOY" data-jp="今日、事務所の文書を変革する">TRANSFORMA LA DOCUMENTACIÓN DE TU DESPACHO HOY</h2>
+            <p data-es="Agenda una llamada de 15 minutos. Sin compromiso." data-jp="15分のコールを予約。義務なし。">Agenda una llamada de 15 minutos. Sin compromiso.</p>
+            <a href="https://cal.com/joseph-hendershot/reunion-de-15-min" class="btn-cta" data-es="AGENDAR LLAMADA" data-jp="コールを予約">AGENDAR LLAMADA</a>
         </div>
-    </div>
+    </section>
 
+    <!-- FOOTER -->
     <footer>
-        <div class="footer-grid">
-            <div>
-                <div class="footer-logo">
-                    <span class="footer-logo-text">SAKKA 作家</span>
-                </div>
-                <p class="footer-tagline" data-es="SaaS de Agentes de IA para Documentación Operativa" data-jp="業務文書化のためのAIエージェントSaaS">SaaS de Agentes de IA para Documentación Operativa</p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">SAKKA 作家</span>
+                <p data-es="SaaS de Agentes de IA para Documentación Operativa" data-jp="業務文書化のためのAIエージェントSaaS">SaaS de Agentes de IA para Documentación Operativa</p>
             </div>
-            <div class="footer-col">
-                <h4 data-es="PRODUCTO" data-jp="製品">PRODUCTO</h4>
-                <a href="#features" data-es="CARACTERÍSTICAS" data-jp="機能">CARACTERÍSTICAS</a>
-                <a href="#pricing" data-es="PRECIOS" data-jp="価格">PRECIOS</a>
-                <a href="#demo" data-es="DEMO" data-jp="デモ">DEMO</a>
+            <div class="footer-links">
+                <a href="#producto" data-es="Producto" data-jp="製品">Producto</a>
+                <a href="#como-funciona" data-es="Cómo Funciona" data-jp="仕組み">Cómo Funciona</a>
+                <a href="#precios" data-es="Precios" data-jp="価格">Precios</a>
             </div>
-            <div class="footer-col">
-                <h4 data-es="CONTACTO" data-jp="お問い合わせ">CONTACTO</h4>
-                <a href="https://wa.me/525650687655" data-es="(WhatsApp) +52 56 5068 7655"
-                    data-jp="(WhatsApp) +52 56 5068 7655">(WhatsApp) +52 56 5068 7655</a>
-                <a href="">LINKEDIN</a>
-            </div>
-            <div class="footer-col">
-                <h4 data-es="LEGAL" data-jp="法的情報">LEGAL</h4>
-                <a href="javascript:void(0);" id="link-aviso" data-es="AVISO DE PRIVACIDAD" data-jp="プライバシーポリシー">AVISO
-                    DE PRIVACIDAD</a>
-                <a href="javascript:void(0);" id="link-terminos" data-es="TÉRMINOS DE SERVICIO" data-jp="利用規約">TÉRMINOS
-                    DE SERVICIO</a>
+            <div class="footer-legal">
+                <a href="#" id="link-aviso" data-es="Aviso de Privacidad" data-jp="プライバシーポリシー">Aviso de Privacidad</a>
+                <a href="#" id="link-terminos" data-es="Términos de Servicio" data-jp="利用規約">Términos de Servicio</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <span class="footer-copy"
-                data-es="© 2026 SAKKA 作家 · Sakka & Co. inc · SAAS DE AGENTES DE IA · DOCUMENTACIÓN OPERATIVA PARA DESPACHOS PROFESIONALES"
-                data-jp="© 2026 SAKKA 作家 · Sakka & Co. inc · AIエージェントSaaS · 専門事務所向け業務文書化">© 2026 SAKKA 作家 · Sakka &amp;
-                Co. inc · SAAS DE AGENTES DE IA · DOCUMENTACIÓN OPERATIVA PARA DESPACHOS
-                PROFESIONALES</span>
+            <p data-es="© 2025 SAKKA. Todos los derechos reservados." data-jp="© 2025 SAKKA. 全著作権所有。">© 2025 SAKKA. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <div id="legal-panel"
-        style="display: none; background: #14120b; color: #fff; padding: 80px 40px; border-top: 1px solid #2e2d29; margin-top: -1px;">
-        <div style="max-width: 800px; margin: 0 auto; position: relative;">
-            <button id="close-legal"
-                style="position: absolute; top: 0; right: 0; background: transparent; border: 1px solid #444; color: #888; border-radius: 4px; padding: 8px 12px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .1em; transition: all 0.2s;">
-                CERRAR [X]
-            </button>
-            <h2 id="legal-title" style="font-family:'Bebas Neue', sans-serif; font-size:48px; margin-bottom: 24px;">
-            </h2>
-            <div id="legal-content" style="color: #a19d93; font-size: 16px; line-height: 1.8;"></div>
-        </div>
+    <!-- LEGAL PANEL -->
+    <div id="legal-panel" style="display:none;">
+        <button id="close-legal" aria-label="Cerrar">×</button>
+        <div id="legal-content"></div>
     </div>
 
-    <script type="module" src="./script.js?v=6.0"></script>
+    <script src="script.js"></script>
 
 </body>
-
 </html>
