@@ -393,3 +393,47 @@ try {
     document.getElementById('link-terminos')?.addEventListener('click',  e => { e.preventDefault(); openLegalPanel('terminos'); });
     document.getElementById('close-legal')?.addEventListener('click',   () => { if (legalPanel) legalPanel.style.display = 'none'; });
 } catch (err) { console.error('Legal panel:', err); }
+
+// =============================================================
+//  MOBILE MENU
+// =============================================================
+try {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+} catch (err) { console.error('Mobile menu:', err); }
+
+// =============================================================
+//  SMOOTH SCROLL FOR ANCHOR LINKS
+// =============================================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            e.preventDefault();
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
